@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web Design</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
+    <link rel="icon" type="image/webp" href="./imgs/LJAmonogram.webp">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-holder">
+            <div class="logo">L</div>
+            <div class="logo-text">Portfolio Website</div>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#work-experience">Work Experience</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#coursework">Coursework</a>
+                </li>
+                <li>
+                    <a href="mailto:lu097697@ucf.edu" class="button">Contact Me</a>
+                </li>
+            </ul>
+            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                </svg>
+                  
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero container">
+            <div class="hero-blue">
+                <h1><small>Hello my name is,</small>
+                Luke Anderson
+            </h1>
+            <p>
+                I am an Honors Computer Engineering major with a minor in Physics at the University of
+                Central Florida.  I currently work at an AI Telecommunications start-up named Airmeez as
+                a Software Engineering Intern. 
+                <span>My areas of interest are in Quantum Computing, AI/ML, Software Engineering,
+                Web Developement, and Computer Architecture.</span>
+            </p>
+            <div class="call-to-action">
+                <a href="LukeResumeMay24TechUpdate.pdf" class="button black">
+                    View Resume
+                </a>
+                <a href="mailto:lu097697@ucf.edu" class="button white">
+                    Contact Me
+                </a>
+            </div>
+            <div class="social-links">
+                <a href="#">
+                    <img src="./imgs/github.png" alt="GitHub" width="48"/>
+                </a>
+                <a href="#">
+                    <img src="./imgs/linkedin.png" alt="Linkedin" width="48"/>
+                </a>
+            </div>
+            </div>
+            <div class="hero-yellow">
+                <img src="./imgs/luke-hero.png" alt="aria-hidden" width="100%" />
+            </div>
+        </section>
+        <section class="logos container">
+            <div class="marquee">
+                <div class="track">
+                    <img src="./imgs/html.png" alt="HTML" wdith = "128"/>
+                    <img src="./imgs/css.png" alt="CSS" width="128" />
+					<img src="./imgs/javascript.png" alt="JS" width="128" />
+                    <img src="./imgs/php-original.svg" width="128" alt="PHP" />
+                    <img src="./imgs/mysql-plain-wordmark.svg" width="128" alt="MySQL" />
+					<img src="./imgs/nextjs.png" width="128" alt="Next JS" />
+					<img src="./imgs/vscode.png" width="128" alt="VS Code" />
+					<img src="./imgs/python.png" width="128" alt="Python" />
+                    <img src="./imgs/java-original.svg" width="128" alt="Java" />
+                    <img src="./imgs/c-original.svg" width="128" alt="C" />
+                    <img src="./imgs/go-original-wordmark.svg" width="128" alt="GoLang" />
+                    <img src="./imgs/googlecloud-plain-wordmark.svg" width="128" alt="MySQL" />
+					<img src="./imgs/html.png" alt="HTML" width="128" />
+					<img src="./imgs/css.png" alt="CSS" width="128" />
+					<img src="./imgs/javascript.png" alt="JS" width="128" />
+                    <img src="./imgs/php-original.svg" width="128" alt="PHP" />
+                    <img src="./imgs/mysql-plain-wordmark.svg" width="128" alt="MySQL" />
+					<img src="./imgs/nextjs.png" width="128" alt="Next JS" />
+					<img src="./imgs/azure.png" width="128" alt="Azure" />
+					<img src="./imgs/vscode.png" width="128" alt="VS Code" />
+					<img src="./imgs/python.png" width="128" alt="Python" />
+                    <img src="./imgs/java-original.svg" width="128" alt="Java" />
+                    <img src="./imgs/c-original.svg" width="128" alt="C" />
+                    <img src="./imgs/go-original-wordmark.svg" width="128" alt="GoLang" />
+                    <img src="./imgs/googlecloud-plain-wordmark.svg" width="128" alt="MySQL" />
+                </div>
+            </div>
+        </section>
+        <section id="education" class="education container">
+            <h2><small>Past/Current</small>Education</h2>
+            <div class="degrees">
+                <article>
+                    <figure>
+                        <div>
+                            <img src="./imgs/ucfSeal.png" alt="University of Central Florida" width="80%">
+                            <figcaption>
+                                <span>University of Central Florida</span>
+                            </figcaption>
+                        </div>
+                    </figure>
+                    <div>Aug 2022 - May 2026</div>
+                    <h3>Bachelors of Honors Computer Engineering, Minor in Physics</h3>
+                </article>
+                <article>
+                    <figure>
+                        <div>
+                            <img src="./imgs/SPC.png" alt="St. Petersburg College" width="80%">
+                            <figcaption>
+                                <span>St. Petersburg College</span>
+                            </figcaption>
+                        </div>
+                    </figure>
+                    <div>Aug 2020 - May 2022</div>
+                    <h3>Associate of Arts</h3>
+                </article>
+            </div>
+        </section>
+        <section id="skills" class="skills container">
+            <h2>
+                <small>About Me</small>
+                Skills
+            </h2>
+            <div class="holder-green">
+                <div class="left-column">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>GoLang</li>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                    </ul>
+                    <h3>Other Languages</h3>
+                    <ul>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>MIPS Assembly</li>
+                    </ul>
+                    <h3>Programming Libraries</h3>
+                    <ul>
+                        <li>Qiskit</li>
+                        <li>SipGo</li>
+                        <li>Basics of:
+                            TensorFlow, OpenCV, TabulaPy, Matplotlib
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <h3>A bit about me</h3>
+                    <p>Hello my name is Luke Anderson.  I am a Florida native and enjoy
+                        going to the beach, and surfing.  I stay active by practicing martial arts,
+                        going to the gym, hiking, and running.  I love to travel and have currently been to 38 states
+                        and 7 countries so far.  I have one pet, a Dachshund named Buddy who loves to play fetch.
+                    </p>
+                    <p>
+                        I am currently working on a web-based planner with my roommate.  The goal is to create
+                        an application that can be deployed on a home-server that allows users to create
+                        an account and create to-do lists for each calendar day.  Since there is no website
+                        out that is as custom as I wanted, I figured I may as well make one.  I would also 
+                        like to add an AI chatbot that can give information on inputs to the calendar 
+                        and to-do lists.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="work-experience" class="work-experience container">
+            <h2>
+                <small>Recent</small>
+                Work Experience
+            </h2>
+            <div class="jobs">
+                <article>
+                    <figure>
+                        <div>
+                            <img src="./imgs/airmeez-logo-slogan.webp" alt="Workplace-1" width="100%">
+                            <figcaption>
+                                <span>Airmeez Inc.</span>
+                            </figcaption>
+                        </div>
+                    </figure>
+                    <h3>Software Engineering Intern</h3>
+                    <div>Jan. 2024 - Present</div>
+                    <p>
+                        <li>Use GoLang to design, build, and test API’s that tranfer data to and from Airmeez main server</li>
+                        <li>Develop new APIs that integrate the main server with SIP VoIP devices</li>
+                        
+                    </p>
+                </article>
+                <article>
+                    <figure>
+                        <div>
+                            <img src="./imgs/ucfSeal.png" alt="Workplace-2" width="100%">
+                            <figcaption>
+                                University of Central Florida
+                            </figcaption>
+                        </div>
+                    </figure>
+                    <h3>Undergraduate Research Assistant</h3>
+                    <div>Aug. 2023 - Present</div>
+                    <p>
+                        <li> Used a Quantum Computing specific Python library (Qiskit) to modify a quantum circuit and then used
+                            TensorFlow to optimize the circuit for error reduction</li>
+                        <li>Implementing various Python skills to simplify and add fields to the input and output</li>
+                        <li>Learned how to use GitHub to collaborate with my Professor</li>
+                    </p>
+                </article>
+                <article>
+                    <figure>
+                        <div>
+                            <img src="./imgs/REW-clear.jpg" alt="Workplace-3" width="100%">
+                            <figcaption>
+                                Resaurant Equipment World (Piece Sales Co., Inc.)
+                            </figcaption>
+                        </div>
+                    </figure>
+                    <h3>Pricing Administrator</h3>
+                    <div>Jun. 2023 - Dec. 2023</div>
+                    <p>
+                        <li>Managed Excel spreadsheets to upload to the REW system to ensure all prices on website were current</li>
+                        <li>Problem solved when presented with complicated pricing lists</li>
+                        <li>Worked with coworkers and management to ensure an efficient and timely upload process</li>
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section id="projects" class="bento container">
+            <h2>
+                <small>
+                    Previous/Current
+                </small>
+                Projects
+            </h2>
+            <div class="bento-grid">
+                <a href="project1.html" class="bento-item">
+                    <img src="./imgs/sipMwiChatGpt.webp" alt="SIP MWI" width="100%">
+                    <figcaption>
+                        <span>Go SIP MWI</span>
+                    </figcaption>
+                </a>
+                <a href="project2.html" class="bento-item">
+                    <img src="./imgs/cMovieTheaterManagementChatGpt.webp" alt="C Movie Theatre Management Programs" width="100%">
+                    <figcaption>
+                        <span>C Movie Theatre Management Programs</span>
+                    </figcaption>
+                </a>
+                <a href="project3.html" class="bento-item">
+                    <img src="./imgs/javaFacultyManagementProgramChatGpt.webp" alt="Java Faculty Management Program" width="100%">
+                    <figcaption>
+                        <span>Java Faculty Management Program</span>
+                    </figcaption>
+                </a>
+                <a href="project4.html" class="bento-item">
+                    <img src="./imgs/dFlipFlopChatGpt.webp" alt="D Gate Breadboard Flip Flop" width="100%">
+                    <figcaption>
+                        <span>Breadboard D Gate Flip-Flop</span>
+                    </figcaption>
+                </a>
+                <a href="project5.html" class="bento-item">
+                    <img src="./imgs/QFTChatGpt.webp" alt="Python Quantum Fourier Transform" width="100%">
+                    <figcaption>
+                        <span>Python Quantum Fourier/Inverse Fourier Transform</span>
+                    </figcaption>
+                </a>
+                <a href="project6.html" class="bento-item">
+                    <img src="./imgs/CalendarChatGpt.webp" alt="Calendar/To-do List" width="100%">
+                    <figcaption>
+                        <span>Current Project: Planner Web Application</span>
+                    </figcaption>
+                </a>
+
+            </div>
+        </section>
+        <section id="coursework" class="coursework container">
+            <h2><small>Relevant</small>Coursework</h2>
+            <div class="courses-list">
+                <h3>Math and Science</h3>
+                <ul>
+                    <li>Calculus 1-3</li>
+                    <li>Differential Equations</li>
+                    <li>Physics 1 and 2</li>
+                    <li>Mechanics</li>
+                    <li>Theoretical Methods of Physics</li>
+                    <li>Wave Mechanics 1 and 2</li>
+                    <li>Chemistry 1</li>
+                </ul>
+                <h3>Computer Science</h3>
+                <ul>
+                    <li>Introduction to C</li>
+                    <li>Computer Science 1 and 2 (DSA)</li>
+                    <li>Introduction to Object Oriented
+                        Programming</li>
+                    <li>Introduction to Discrete Structures</li>
+                    <li>Introduction to Quantum Computation</li>
+                </ul>
+                <h3>Computer/Electrical Engineering</h3>
+                <ul>
+                    <li>Linear Circuits 1 and 2</li>
+                    <li>Digital Systems</li>
+                    <li>Computer Organization</li>
+                    <li>Computer Architecture</li>
+                </ul>
+            </div>
+        </section>
+        <!--
+        <section class="chatbot container">
+            <h2>
+                <small>
+                    Talk to me!
+                </small>
+                Chatbot
+            </h2>
+            <div class="chatbot-green">
+                <div class="chat-info">
+                    <h3>Azure AI Chatbot</h3>
+                    <p>Following online tutorials, I have replicated this AI chatbot by interacting
+                        with the Microsoft Azure AI API.  The ChatBot knows all my skills, work experience
+                        and hobbies.  You can ask any question you like about me to this bot!
+                    </p>
+                    <p>If you would like a copy of my resume, please press the Download button below.</p>
+                    <a href="LukeResumeMay24TechUpdate.pdf"class = "button black">Download Resume</a>
+                    
+                </div>
+                <div class="chat-box">
+                    <div class="scroll-area">
+                        <ul id="chat-log">
+                            <li>
+                                <span class="avatar bot">
+                                    AI</span>
+                                    <div class="message">Hello, I am a friendy chatbot that lets you interact with this portfolio and CV.  How can I help?</div>
+                            </li>
+                            <li>
+                                <span class="avatar user">
+                                    User</span>
+                                    <div class="message">I have a question about this resume.</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chat-message">
+                        <input type="text" placeholder="Hey Luke, what skills are you best at?">
+                        <button class="button black">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+</body>
+</html>
