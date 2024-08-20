@@ -52,13 +52,39 @@
     <main>
         <section class="hero container">
             <div class="hero-blue">
-                <h1><small>Hello my name is,</small>
-                Luke Anderson
-            </h1>
+                <h1>
+                    <small id="typewriter"></small>
+                    Luke Anderson
+                </h1>
+                
+                <script>
+                    function typeWriter(text, elementId) {
+                        let i = 0;
+                        const speed = 100; // The speed/duration of the effect in milliseconds
+                        
+                        function type() {
+                            if (i < text.length) {
+                                document.getElementById(elementId).innerHTML += text.charAt(i);
+                                i++;
+                                setTimeout(type, speed);
+                            }
+                        }
+                        type();
+                    }
+                
+                    // Call the function when the window loads
+                    window.onload = function() {
+                        typeWriter('Hello ', 'typewriter');
+                        setTimeout(function() {typeWriter('my name is,', 'typewriter');}, 1500);
+                        //setTimeout(function() {typeWriter('Luke Anderson', 'typewriter');}, 1500);
+                        //typeWriter('my name is,', 'typewriter');
+                    };
+
+                </script>
             <p>
                 I am an Honors Computer Engineering major with a minor in Physics at the University of
                 Central Florida.  I currently work as a contract Software Engineer for Necival LLC. where I create web
-                based software using PHP, SQL, and jQuery.
+                based software using PHP, SQL, and GoLang.
                 <span>My areas of interest are in Quantum Computing, AI/ML, Software Engineering,
                 Web Development, and Computer Architecture.</span>
             </p>
@@ -182,8 +208,8 @@
                     <h3>A bit about me</h3>
                     <p>Hello my name is Luke Anderson.  I am a Florida native and enjoy
                         going to the beach, and surfing.  I stay active by practicing martial arts,
-                        going to the gym, hiking, and running.  I love to travel and have currently been to 38 states
-                        and 7 countries so far.  I have one pet, a Dachshund named Buddy who loves to play fetch.
+                        going to the gym, hiking, and running.  I love to travel and have currently been to 40 states
+                        and 8 countries so far.  I have one pet, a Dachshund named Buddy who loves to play fetch.
                     </p>
                     <p>
                         I am currently working on a web-based planner with my roommate.  The goal is to create
