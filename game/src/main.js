@@ -1,6 +1,6 @@
-import { scenes, nearbySpot, walk } from "./world.js";
+import { scenes, nearbySpot, walk } from "./world.js?v=20261112";
 import { paintScene, paintPlayer, paintResidents, pixelScale } from "./art.js";
-import { classicMarkup, contactLinks, destinationCards, panelMarkup } from "./view.js";
+import { classicMarkup, contactLinks, destinationCards, panelMarkup } from "./view.js?v=20261112";
 
 const game = document.querySelector("#game");
 const classic = document.querySelector("#classic");

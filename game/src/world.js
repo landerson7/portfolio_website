@@ -1,4 +1,4 @@
-import { areas, contentTitle } from "./content.js";
+import { areas, contentTitle } from "./content.js?v=20261112";
 
 const point = (x, y) => ({ x, y });
 const rect = (x, y, w, h) => ({ x, y, w, h });

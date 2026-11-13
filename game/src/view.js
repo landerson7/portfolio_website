@@ -8,7 +8,7 @@ import {
   skills,
   coursework,
   contentTitle,
-} from "./content.js";
+} from "./content.js?v=20261112";
 
 const asset = (name, extension = "png") => new URL(`../assets/${name}.${extension}`, import.meta.url).href;
 const esc = (value) =>
@@ -117,7 +117,7 @@ export function panelMarkup(key) {
   }
   const [section, item] = key.split(".");
   const views = {
-    about: () => direct(about),
+    about: () => `<article class="direct-entry">${description(about)}${facts(about)}</article>`,
     contact: contactView,
     skills: skillList,
     projects: projectsView,
