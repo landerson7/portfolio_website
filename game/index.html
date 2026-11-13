@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11152c" />
+    <meta
+      name="description"
+      content="Explore Luke Anderson’s software engineering portfolio as a playable pixel-art world."
+    />
+    <title>The Developer’s Realm | Luke Anderson</title>
+    <link rel="canonical" href="https://landerson7.github.io/portfolio_website/" />
+    <link rel="icon" href="./assets/crest.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="identity" href="../">
+          <img src="./assets/crest.png" alt="" width="48" height="48" />
+          <span><strong>Luke Anderson</strong><small>Software Engineer</small></span>
+        </a>
+        <div class="mode-switch" role="group" aria-label="Portfolio mode">
+          <button type="button" data-mode="game" aria-pressed="false">Game Mode</button>
+          <button type="button" data-mode="classic" aria-pressed="false">Classic Mode</button>
+        </div>
+        <nav id="header-links" aria-label="Contact, résumé, and portfolio views"></nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section id="game" hidden aria-labelledby="game-title">
+        <div class="game-heading">
+          <div>
+            <h1 id="game-title">The Developer’s Realm</h1>
+            <p>Explore Luke Anderson’s portfolio.</p>
+          </div>
+          <div class="game-actions">
+            <button type="button" class="button area-button" data-open="area" hidden>In This Area</button>
+            <button type="button" class="button blue map-button" data-open="map">
+              <img src="./assets/book.png" alt="" /> World Map <kbd>M</kbd>
+            </button>
+          </div>
+        </div>
+        <div class="game-layout">
+          <div class="game-frame">
+            <div class="scene-bar">
+              <strong id="location-name">Crossroads</strong
+              ><span id="scene-purpose">The four paths meet here</span>
+            </div>
+            <div class="game-stage">
+              <div
+                class="game-screen"
+                id="game-screen"
+                role="group"
+                tabindex="0"
+                aria-label="Game world"
+                aria-describedby="game-controls"
+              >
+                <canvas id="world" aria-hidden="true"></canvas>
+                <div id="hotspots" role="group" aria-label="Visible points of interest"></div>
+                <div id="prompt" class="interact-prompt" hidden></div>
+              </div>
+            </div>
+            <div class="game-controls" id="game-controls">
+              <span class="keyboard-guide"><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> Move</span>
+              <span class="keyboard-guide"><kbd>E</kbd> Interact</span>
+              <span>Click or tap any marker</span>
+              <span class="keyboard-guide"><kbd>M</kbd> Map</span>
+            </div>
+            <div class="touch-controls" aria-label="Touch controls">
+              <div class="dpad" role="group" aria-label="Move">
+                <button type="button" data-direction="up" aria-label="Move up">↑</button>
+                <button type="button" data-direction="left" aria-label="Move left">←</button>
+                <button type="button" data-direction="down" aria-label="Move down">↓</button>
+                <button type="button" data-direction="right" aria-label="Move right">→</button>
+              </div>
+              <button type="button" id="touch-interact" class="button blue" disabled>Interact</button>
+            </div>
+          </div>
+          <div class="game-sidebar">
+            <aside class="destinations" aria-labelledby="destination-title">
+              <h2 id="destination-title">Destinations</h2>
+              <div id="destination-list"></div>
+            </aside>
+            <section class="destinations room-shortcuts" aria-labelledby="room-title">
+              <h2 id="room-title" hidden>In This Area</h2>
+              <div id="room-links" hidden></div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section id="classic" hidden aria-labelledby="classic-title"></section>
+      <noscript
+        ><p class="no-script">
+          The Realm needs JavaScript.
+          <a href="../portfolio.html">Open Luke’s illustrated portfolio</a>.
+        </p></noscript
+      >
+    </main>
+    <footer>
+      <a href="../legacy/">← Legacy Portfolio</a>
+      <a href="../portfolio.html">Illustrated Portfolio</a>
+    </footer>
+    <dialog id="panel" aria-labelledby="panel-title">
+      <div class="panel-heading">
+        <h2 id="panel-title"></h2>
+        <button type="button" class="button" id="close-panel" aria-label="Close panel">×</button>
+      </div>
+      <div id="panel-content" class="panel-content"></div>
+    </dialog>
+  </body>
+</html>

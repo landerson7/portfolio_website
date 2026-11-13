@@ -1,0 +1,1506 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="The portfolio of Luke Anderson, a software engineer working across backend, mobile and embedded systems."
+    />
+    <meta name="theme-color" content="#11152c" />
+    <title>Luke Anderson | Software Engineer</title>
+    <link rel="icon" href="assets/fantasy/crest.png" />
+    <link rel="preload" href="assets/fantasy/pixelify.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#home"
+          ><img class="sprite" src="assets/fantasy/crest.png" width="48" height="48" alt="" />
+          <span class="brand-name">Luke Anderson<small>Software Engineer</small></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home" aria-current="location"><span>Home</span></a
+          ><a href="#projects"><span>Projects</span></a
+          ><a href="#skills"><span>Skills</span></a
+          ><a href="#work-experience"><span>Experience</span></a
+          ><a href="#education"><span>Education</span></a
+          ><a href="#contact"><span>Contact</span></a>
+        </nav>
+        <div class="nav-social">
+          <a href="https://github.com/landerson7" aria-label="GitHub"
+            ><img src="imgs/github.png" width="20" height="20" alt=""
+          /></a>
+          <a href="https://www.linkedin.com/in/landerson007/" aria-label="LinkedIn"
+            ><span class="linkedin-mark" aria-hidden="true"></span
+          ></a>
+          <a href="mailto:landerson144000@gmail.com" aria-label="Email"><span aria-hidden="true">✉</span></a>
+        </div>
+        <details class="mobile-menu">
+          <summary aria-label="Navigation menu"><span aria-hidden="true"></span></summary>
+          <nav aria-label="Mobile menu">
+            <a href="#home" aria-current="location"><span>Home</span></a
+            ><a href="#projects"><span>Projects</span></a
+            ><a href="#skills"><span>Skills</span></a
+            ><a href="#work-experience"><span>Experience</span></a
+            ><a href="#education"><span>Education</span></a
+            ><a href="#contact"><span>Contact</span></a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section id="home" class="home" aria-labelledby="hero-title">
+        <div class="hero">
+          <picture class="hero-scene">
+            <source media="(max-width: 600px)" srcset="assets/fantasy/overworld-mobile.webp" />
+            <source media="(max-width: 950px)" srcset="assets/fantasy/overworld-medium.webp" />
+            <img src="assets/fantasy/overworld.webp" width="730" height="243" alt="" fetchpriority="high" />
+          </picture>
+          <div class="hero-effects" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><b></b><b></b><span class="water-glimmer"></span
+            ><span class="cloud-haze"></span>
+          </div>
+          <div class="hero-content">
+            <h1 id="hero-title">Luke Anderson</h1>
+            <p>Software Engineer <span aria-hidden="true">•</span> Builder of Digital Worlds</p>
+            <div class="hero-actions">
+              <a href="./" class="button button-blue">Play The Developer’s Realm</a>
+              <a href="#projects" class="button button-blue"
+                ><img class="sprite" src="assets/fantasy/swords.png" width="48" height="48" alt="" />View My
+                Projects <span aria-hidden="true">→</span></a
+              >
+              <a href="game/assets/UTAustinResume2.pdf" download class="button button-red"
+                ><img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" />Download
+                Resume</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="stone-rule" aria-hidden="true"></div>
+        <div class="home-content content">
+          <article class="about parchment">
+            <img
+              class="sconce sconce-left sprite"
+              src="assets/fantasy/lantern.png"
+              width="48"
+              height="48"
+              alt=""
+            />
+            <img
+              class="sconce sconce-right sprite"
+              src="assets/fantasy/lantern.png"
+              width="48"
+              height="48"
+              alt=""
+            />
+            <div>
+              <h2>About Me</h2>
+              <p>
+                I’m an electronics engineer with the U.S. Air Force, where I develop mission-planning
+                software. I earned a B.S. in Computer Engineering with a minor in Physics from the University
+                of Central Florida. My experience includes mobile development at Lutron, backend and telecom
+                work at Airmeez, concurrent systems at Necival, and quantum circuit research at UCF.
+              </p>
+              <p>
+                I’m a Florida native who enjoys surfing, reading, climbing, hiking, running, and traveling. I
+                have a dachshund named Buddy who loves to play fetch.
+              </p>
+            </div>
+            <img
+              class="about-watermark sprite"
+              src="assets/fantasy/crest.png"
+              width="48"
+              height="48"
+              alt=""
+            />
+          </article>
+          <section class="featured" aria-labelledby="featured-title">
+            <div class="section-bar">
+              <h2 id="featured-title" class="plaque">
+                <img class="sprite" src="assets/fantasy/chest.png" width="48" height="48" alt="" />Featured
+                Projects
+              </h2>
+              <a href="#projects">View All Projects →</a>
+            </div>
+            <div class="featured-grid">
+              <article class="project-card">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/workshop.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>SidecraftX</h3>
+                  <p>
+                    I’m building an LLM-powered platform that guides users through launching and running
+                    real-world side hustles.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>Node.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Docker</li>
+                    <li>AWS</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="sidecraftx.html"
+                      aria-label="View Project for SidecraftX"
+                      >View Project <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/aviation.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>P.E.G.A.S.U.S.</h3>
+                  <p>
+                    A real-time heads-up display prototype for small aircraft that integrates readings from
+                    four sensors.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>ESP32</li>
+                    <li>Raspberry Pi 4</li>
+                    <li>I²C</li>
+                    <li>UART</li>
+                    <li>Qt</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="pegasus.html"
+                      aria-label="View Project for P.E.G.A.S.U.S."
+                      >View Project <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/library.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>Fit Link</h3>
+                  <p>A React Native app for personal trainers to manage clients and schedules.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>React Native</li>
+                    <li>MongoDB</li>
+                    <li>Google Cloud</li>
+                    <li>Jest</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a class="button button-blue" href="fit-link.html" aria-label="View Project for Fit Link"
+                      >View Project <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="skills-preview" aria-labelledby="skills-preview-title">
+            <div class="section-bar">
+              <h2 id="skills-preview-title" class="plaque">
+                <img class="sprite" src="assets/fantasy/potion.png" width="48" height="48" alt="" />Skills
+              </h2>
+            </div>
+            <ul>
+              <li>
+                <a href="#skills"
+                  ><img class="sprite" src="assets/fantasy/swords.png" width="48" height="48" alt="" /><strong
+                    >Languages</strong
+                  ><span>Go, Kotlin, JavaScript</span></a
+                >
+              </li>
+              <li>
+                <a href="#skills"
+                  ><img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" /><strong
+                    >Web &amp; Backend</strong
+                  ><span>React, Node.js, Express</span></a
+                >
+              </li>
+              <li>
+                <a href="#skills"
+                  ><img class="sprite" src="assets/fantasy/potion.png" width="48" height="48" alt="" /><strong
+                    >Cloud &amp; Tools</strong
+                  ><span>AWS, Google Cloud, Git</span></a
+                >
+              </li>
+              <li>
+                <a href="#skills"
+                  ><img class="sprite" src="assets/fantasy/shield.png" width="48" height="48" alt="" /><strong
+                    >Systems &amp; CS</strong
+                  ><span>Embedded systems, Computer networks, Operating systems</span></a
+                >
+              </li>
+              <li>
+                <a href="#skills"
+                  ><img
+                    class="sprite"
+                    src="assets/fantasy/crystal.png"
+                    width="48"
+                    height="48"
+                    alt=""
+                  /><strong>Mobile &amp; Other</strong><span>Jetpack Compose, React Native, SwiftUI</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="experience-preview" aria-labelledby="experience-preview-title">
+            <div class="section-bar">
+              <h2 id="experience-preview-title" class="plaque">
+                <img class="sprite" src="assets/fantasy/shield.png" width="48" height="48" alt="" />Experience
+                Preview
+              </h2>
+              <a href="#work-experience">View Full Experience →</a>
+            </div>
+            <div class="parchment preview-roles">
+              <a href="#work-experience"
+                ><img class="sprite" src="assets/fantasy/shield.png" width="48" height="48" alt="" /><span
+                  ><strong>U.S. Air Force</strong>Electronics Engineer · June 2026–Present</span
+                ><b aria-hidden="true">→</b></a
+              >
+              <a href="#work-experience"
+                ><img class="sprite" src="assets/fantasy/lantern.png" width="48" height="48" alt="" /><span
+                  ><strong>Lutron Electronics</strong>Software Engineer Intern · Summer 2025</span
+                ><b aria-hidden="true">→</b></a
+              >
+            </div>
+          </section>
+        </div>
+      </section>
+      <section id="projects" class="world-section" aria-labelledby="projects-title">
+        <div class="chapter chapter-projects">
+          <img
+            class="chapter-art"
+            src="assets/fantasy/overworld-medium.webp"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="chapter-sign">
+            <h2 id="projects-title">
+              <img class="sprite" src="assets/fantasy/chest.png" width="48" height="48" alt="" />Project Atlas
+            </h2>
+            <p>A collection of software projects, digital builds and engineering adventures.</p>
+          </div>
+        </div>
+        <div class="stone-rule" aria-hidden="true"></div>
+        <div class="content atlas">
+          <div class="filters" role="group" aria-label="Filter projects by category" hidden>
+            <button class="button button-dark" type="button" data-filter="all" aria-pressed="true">
+              All Projects</button
+            ><button class="button button-dark" type="button" data-filter="web" aria-pressed="false">
+              Web</button
+            ><button class="button button-dark" type="button" data-filter="backend" aria-pressed="false">
+              Backend</button
+            ><button class="button button-dark" type="button" data-filter="mobile" aria-pressed="false">
+              Mobile</button
+            ><button class="button button-dark" type="button" data-filter="systems" aria-pressed="false">
+              Systems</button
+            ><button class="button button-dark" type="button" data-filter="ai" aria-pressed="false">
+              AI
+            </button>
+          </div>
+          <p class="sr-only" role="status" id="filter-status"></p>
+          <div class="atlas-layout">
+            <div class="project-grid">
+              <article class="project-card" data-category="web ai">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/workshop.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Web · AI</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">AI mentorship platform</p>
+                  <h3>SidecraftX</h3>
+                  <p>
+                    I’m building an LLM-powered platform that guides users through launching and running
+                    real-world side hustles.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>Node.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Docker</li>
+                    <li>AWS</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a class="button button-blue" href="sidecraftx.html" aria-label="Details for SidecraftX"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="systems">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/aviation.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Systems</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">UCF senior design capstone</p>
+                  <h3>P.E.G.A.S.U.S.</h3>
+                  <p>
+                    A real-time heads-up display prototype for small aircraft that integrates readings from
+                    four sensors.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>ESP32</li>
+                    <li>Raspberry Pi 4</li>
+                    <li>I²C</li>
+                    <li>UART</li>
+                    <li>Qt</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a class="button button-blue" href="pegasus.html" aria-label="Details for P.E.G.A.S.U.S."
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                    <a
+                      class="button button-dark"
+                      href="https://github.com/landerson7/PEGASUS"
+                      aria-label="GitHub repository for P.E.G.A.S.U.S."
+                      >GitHub ↗</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="mobile backend">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/library.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Mobile · Backend</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Team project</p>
+                  <h3>Fit Link</h3>
+                  <p>A React Native app for personal trainers to manage clients and schedules.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>React Native</li>
+                    <li>MongoDB</li>
+                    <li>Google Cloud</li>
+                    <li>Jest</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a class="button button-blue" href="fit-link.html" aria-label="Details for Fit Link"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="backend ai">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/observatory.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Backend · AI</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Personal project</p>
+                  <h3>Webcourses to Notion API</h3>
+                  <p>A Go service that turns Webcourses assignments into a Notion to-do list.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Go</li>
+                    <li>REST APIs</li>
+                    <li>Notion API</li>
+                    <li>Raspberry Pi 5</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="project7.html"
+                      aria-label="Details for Webcourses to Notion API"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="systems">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/circuits.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Systems</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Hardware project</p>
+                  <h3>Ultrasonic Range Finder</h3>
+                  <p>An MSP430-based device that measures distance and displays it on an LCD.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>C</li>
+                    <li>MSP430</li>
+                    <li>Fusion 360</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="range-finder.html"
+                      aria-label="Details for Ultrasonic Range Finder"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="web">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/calendar.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Web</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Team prototype</p>
+                  <h3>Planner Web Application</h3>
+                  <p>A shared calendar and to-do list prototype built with PHP and MySQL.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>HTML/CSS</li>
+                    <li>Apache</li>
+                    <li>AWS Lightsail</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="project6.html"
+                      aria-label="Details for Planner Web Application"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                    <a
+                      class="button button-dark"
+                      href="https://github.com/landerson7/summerProject"
+                      aria-label="GitHub repository for Planner Web Application"
+                      >GitHub ↗</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="backend">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/communications.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Backend</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Airmeez work sample</p>
+                  <h3>SIP Message Waiting Indicator (MWI)</h3>
+                  <p>
+                    A Go microservice that converts SIP message-waiting traffic to structured JSON and
+                    notifies subscribed devices.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Go</li>
+                    <li>SIP</li>
+                    <li>Google Cloud Storage</li>
+                    <li>Pub/Sub</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="project1.html"
+                      aria-label="Details for SIP Message Waiting Indicator (MWI)"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="systems">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/theater.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Systems</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Coursework</p>
+                  <h3>Movie Theater Management</h3>
+                  <p>C programs modeling theater operations such as ticketing and concessions.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>C</li>
+                    <li>Data structures</li>
+                    <li>Algorithms</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="project2.html"
+                      aria-label="Details for Movie Theater Management"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="systems">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/academy.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Systems</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Coursework</p>
+                  <h3>University Records Manager</h3>
+                  <p>A Java program for creating, viewing, and removing student and staff records.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Java</li>
+                    <li>Object-oriented programming</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="project3.html"
+                      aria-label="Details for University Records Manager"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="systems">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/arcade.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Systems</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Personal project</p>
+                  <h3>Breadboard D Flip-Flop</h3>
+                  <p>A breadboard circuit demonstrating the timing behavior of a D flip-flop.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Digital logic</li>
+                    <li>Circuit analysis</li>
+                    <li>Prototyping</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="project4.html"
+                      aria-label="Details for Breadboard D Flip-Flop"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="systems">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/quantum.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Systems</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Coursework</p>
+                  <h3>Quantum Fourier Transform</h3>
+                  <p>Quantum Fourier and inverse transform circuits implemented and tested in Qiskit.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Python</li>
+                    <li>Qiskit</li>
+                    <li>Quantum computing</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="project5.html"
+                      aria-label="Details for Quantum Fourier Transform"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="backend">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/observatory.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Backend</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Necival work sample</p>
+                  <h3>Trading Bot</h3>
+                  <p>A concurrent cryptocurrency trading system written in Go for real-time execution.</p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Go</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a class="button button-blue" href="trading-bot.html" aria-label="Details for Trading Bot"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="project-card" data-category="web">
+                <div class="card-art">
+                  <img
+                    src="assets/fantasy/workshop.webp"
+                    width="204"
+                    height="130"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="category">Web</span>
+                </div>
+                <div class="card-body">
+                  <p class="project-kind">Personal project</p>
+                  <h3>Portfolio Website</h3>
+                  <p>
+                    My personal portfolio, built with HTML, CSS, and JavaScript and published with GitHub
+                    Pages.
+                  </p>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Canvas</li>
+                    <li>GitHub Pages</li>
+                  </ul>
+                  <div class="card-actions">
+                    <a
+                      class="button button-blue"
+                      href="portfolio-project.html"
+                      aria-label="Details for Portfolio Website"
+                      >Details <span aria-hidden="true">→</span></a
+                    >
+                    <a
+                      class="button button-dark"
+                      href="https://github.com/landerson7/portfolio_website"
+                      aria-label="GitHub repository for Portfolio Website"
+                      >GitHub ↗</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+            <aside class="atlas-aside" aria-label="Project overview">
+              <div class="aside-panel">
+                <h3>
+                  <img class="sprite" src="assets/fantasy/chest.png" width="48" height="48" alt="" />Adventure
+                  Log
+                </h3>
+                <p><strong data-project-count>13</strong> projects shown</p>
+                <p>Personal builds, team prototypes, coursework and work samples.</p>
+              </div>
+              <div class="aside-panel">
+                <h3>
+                  <img class="sprite" src="assets/fantasy/swords.png" width="48" height="48" alt="" />Tools
+                  &amp; Technologies
+                </h3>
+                <ul class="tags" aria-label="Technologies">
+                  <li>Go</li>
+                  <li>C / C++</li>
+                  <li>Python</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>React Native</li>
+                  <li>MongoDB</li>
+                  <li>Google Cloud</li>
+                  <li>Qt / QML</li>
+                  <li>Raspberry Pi</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="world-section" aria-labelledby="skills-title">
+        <div class="chapter chapter-skills">
+          <img class="chapter-art" src="assets/fantasy/guild.webp" alt="" loading="lazy" decoding="async" />
+          <div class="chapter-sign">
+            <h2 id="skills-title">
+              <img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" />Skill Tree
+            </h2>
+            <p>Engineering strengths, technologies and tools.</p>
+          </div>
+        </div>
+        <div class="stone-rule" aria-hidden="true"></div>
+        <div class="content skill-content">
+          <div class="skill-book parchment">
+            <article class="skill-branch">
+              <img class="sprite" src="assets/fantasy/swords.png" width="48" height="48" alt="" />
+              <h3>Languages</h3>
+              <ul class="skill-nodes">
+                <li>
+                  <details class="skill-node">
+                    <summary>Go</summary>
+                    <p>Built REST APIs at Airmeez and concurrent trading software at Necival.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Kotlin</summary>
+                    <p>Built a component reordering feature for Lutron’s smart home app.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>JavaScript</summary>
+                    <p>Built the portfolio interface and worked on the Node.js backend for Fit Link.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>TypeScript</summary>
+                    <p>Used for SidecraftX.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>C</summary>
+                    <p>Wrote deterministic sensor polling firmware on an ESP32.</p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">C#</span></li>
+                <li>
+                  <details class="skill-node">
+                    <summary>C++</summary>
+                    <p>Maintained telecom modules at Airmeez and built the P.E.G.A.S.U.S. display.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Python</summary>
+                    <p>Built a convolutional neural network for quantum error classification at UCF.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Java</summary>
+                    <p>Implemented a university records program for object-oriented coursework.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>SQL</summary>
+                    <p>Persisted user preferences in Lutron’s mobile app.</p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">Swift</span></li>
+                <li><span class="skill-node skill-static">MIPS Assembly</span></li>
+              </ul>
+            </article>
+            <article class="skill-branch">
+              <img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" />
+              <h3>Web &amp; Backend</h3>
+              <ul class="skill-nodes">
+                <li>
+                  <details class="skill-node">
+                    <summary>React</summary>
+                    <p>Used for SidecraftX.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Node.js</summary>
+                    <p>Used for SidecraftX and Fit Link.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Express</summary>
+                    <p>Built the Fit Link REST API.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>PostgreSQL</summary>
+                    <p>Used for SidecraftX.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>MongoDB</summary>
+                    <p>Used for Fit Link.</p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">Redis</span></li>
+                <li>
+                  <details class="skill-node">
+                    <summary>HTML/CSS</summary>
+                    <p>Built the portfolio and a shared planner prototype.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>PHP / MySQL</summary>
+                    <p>Used the LAMP stack for a shared planner prototype.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>SipGo</summary>
+                    <p>Worked on SIP message-waiting notifications at Airmeez.</p>
+                  </details>
+                </li>
+              </ul>
+            </article>
+            <article class="skill-branch">
+              <img class="sprite" src="assets/fantasy/potion.png" width="48" height="48" alt="" />
+              <h3>Cloud &amp; Tools</h3>
+              <ul class="skill-nodes">
+                <li>
+                  <details class="skill-node">
+                    <summary>AWS</summary>
+                    <p>Architected and deployed cloud infrastructure for SidecraftX.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Google Cloud</summary>
+                    <p>
+                      Configured OAuth and Calendar integration for Fit Link and used Storage and Pub/Sub for
+                      SIP notifications.
+                    </p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Git</summary>
+                    <p>Used for collaboration and version control.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Jira</summary>
+                    <p>Used for Agile sprint planning and task tracking at Lutron.</p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">Figma</span></li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Docker</summary>
+                    <p>Used during the Airmeez migration to containerized microservices and on SidecraftX.</p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">Kubernetes</span></li>
+                <li><span class="skill-node skill-static">Helm</span></li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Linux</summary>
+                    <p>Ran a scheduled coursework sync on Raspberry Pi OS.</p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">VS Code</span></li>
+                <li><span class="skill-node skill-static">Android Studio</span></li>
+                <li><span class="skill-node skill-static">Xcode</span></li>
+                <li><span class="skill-node skill-static">Cadence</span></li>
+                <li><span class="skill-node skill-static">Code Composer Studio</span></li>
+                <li><span class="skill-node skill-static">Arduino IDE</span></li>
+              </ul>
+            </article>
+            <article class="skill-branch">
+              <img class="sprite" src="assets/fantasy/shield.png" width="48" height="48" alt="" />
+              <h3>Systems &amp; CS</h3>
+              <ul class="skill-nodes">
+                <li>
+                  <details class="skill-node">
+                    <summary>Embedded systems</summary>
+                    <p>
+                      Worked on ESP32 sensor polling, I²C, UART, and Raspberry Pi display software for
+                      P.E.G.A.S.U.S.
+                    </p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Computer networks</summary>
+                    <p>Worked with SIP and VoIP at Airmeez.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Operating systems</summary>
+                    <p>Coursework included a concurrent hash table in C.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Digital logic</summary>
+                    <p>Prototyped a D flip-flop on a breadboard to demonstrate timing.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Circuit and VLSI design</summary>
+                    <p>Studied circuit design and analysis and CMOS VLSI design at UCF.</p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">Breadboard prototyping and soldering</span></li>
+              </ul>
+            </article>
+            <article class="skill-branch">
+              <img class="sprite" src="assets/fantasy/crystal.png" width="48" height="48" alt="" />
+              <h3>Mobile &amp; Other</h3>
+              <ul class="skill-nodes">
+                <li>
+                  <details class="skill-node">
+                    <summary>Jetpack Compose</summary>
+                    <p>Built cross-platform smart home features at Lutron.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>React Native</summary>
+                    <p>Used on the Fit Link team project.</p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">SwiftUI</span></li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Fusion 360</summary>
+                    <p>Designed the schematic and PCB for an ultrasonic range finder.</p>
+                  </details>
+                </li>
+                <li>
+                  <details class="skill-node">
+                    <summary>Qiskit</summary>
+                    <p>
+                      Modeled quantum circuit errors and simulated configurable qubit flips in UCF research.
+                    </p>
+                  </details>
+                </li>
+                <li><span class="skill-node skill-static">TensorFlow</span></li>
+                <li><span class="skill-node skill-static">OpenCV</span></li>
+                <li><span class="skill-node skill-static">TabulaPy</span></li>
+                <li><span class="skill-node skill-static">Matplotlib</span></li>
+              </ul>
+            </article>
+          </div>
+          <div class="section-bar">
+            <h2 id="capabilities-title" class="plaque">
+              <img class="sprite" src="assets/fantasy/swords.png" width="48" height="48" alt="" />Featured
+              Proficiencies
+            </h2>
+          </div>
+          <div class="capabilities" aria-labelledby="capabilities-title">
+            <article>
+              <img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" />
+              <h3>Backend API Development</h3>
+              <p>Built REST services in Go and Node.js for telecom integrations and mobile scheduling.</p>
+            </article>
+            <article>
+              <img class="sprite" src="assets/fantasy/potion.png" width="48" height="48" alt="" />
+              <h3>Mobile Application Development</h3>
+              <p>Built cross-platform smart-lighting features with Kotlin and Jetpack Compose.</p>
+            </article>
+            <article>
+              <img class="sprite" src="assets/fantasy/crystal.png" width="48" height="48" alt="" />
+              <h3>Embedded Systems</h3>
+              <p>
+                Worked with microcontrollers, sensors and a Raspberry Pi display for an aircraft HUD
+                prototype.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="work-experience" class="world-section" aria-labelledby="experience-title">
+        <div class="chapter chapter-experience">
+          <img
+            class="chapter-art"
+            src="assets/fantasy/quest-log.webp"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="chapter-sign">
+            <h2 id="experience-title">
+              <img class="sprite" src="assets/fantasy/shield.png" width="48" height="48" alt="" />Quest Log
+            </h2>
+            <p>Professional experience and career journey.</p>
+          </div>
+        </div>
+        <div class="stone-rule" aria-hidden="true"></div>
+        <div class="content career-layout">
+          <ol class="timeline">
+            <li class="quest-entry quest-current">
+              <span class="quest-date">June 2026–Present · Warner Robins, GA</span>
+              <article class="quest parchment">
+                <div class="quest-banner">
+                  <img class="sprite" src="assets/fantasy/shield.png" width="48" height="48" alt="" />
+                </div>
+                <div class="quest-info">
+                  <h3>United States Air Force</h3>
+                  <p class="role-title">Electronics Engineer</p>
+                  <ul class="quest-points">
+                    <li>
+                      Develop and maintain mission-planning software for Next-Generation Open Mission Systems
+                      (NOMS).
+                    </li>
+                  </ul>
+
+                  <details>
+                    <summary>Role details <span class="sr-only">for United States Air Force</span></summary>
+                    <p>
+                      Design, develop, and maintain components across multiple programming languages. Work
+                      with software, QA, and DevOps engineers to integrate, validate, and troubleshoot
+                      systems. Participate in code review, testing, and technical documentation.
+                    </p>
+                  </details>
+                </div>
+                <img
+                  class="quest-art"
+                  src="assets/fantasy/hangar.webp"
+                  width="204"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </article>
+            </li>
+            <li class="quest-entry">
+              <span class="quest-date"
+                >January–July 2024 · January–May 2025 · August 2025–June 2026 · Remote</span
+              >
+              <article class="quest parchment">
+                <div class="quest-banner">
+                  <img class="sprite" src="assets/fantasy/crystal.png" width="48" height="48" alt="" />
+                </div>
+                <div class="quest-info">
+                  <span class="status">Completed</span>
+                  <h3>Airmeez Inc.</h3>
+                  <p class="role-title">Software Engineer Intern</p>
+                  <ul class="quest-points">
+                    <li>
+                      Helped migrate a legacy system to Docker-based microservices and built Go REST APIs for
+                      data exchange with a remote server.
+                    </li>
+                  </ul>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Go</li>
+                    <li>C++</li>
+                    <li>Docker</li>
+                    <li>REST APIs</li>
+                  </ul>
+                  <details>
+                    <summary>Role details <span class="sr-only">for Airmeez Inc.</span></summary>
+                    <p>
+                      Developed and maintained C++ server modules that improved session stability and
+                      connection reliability.
+                    </p>
+                  </details>
+                </div>
+                <img
+                  class="quest-art"
+                  src="assets/fantasy/communications.webp"
+                  width="204"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </article>
+            </li>
+            <li class="quest-entry">
+              <span class="quest-date">August 2025–May 2026 · Orlando, FL</span>
+              <article class="quest parchment">
+                <div class="quest-banner">
+                  <img class="sprite" src="assets/fantasy/swords.png" width="48" height="48" alt="" />
+                </div>
+                <div class="quest-info">
+                  <span class="status">Completed</span>
+                  <h3>P.E.G.A.S.U.S.</h3>
+                  <p class="role-title">Project Manager &amp; Embedded Software Engineer · UCF capstone</p>
+                  <ul class="quest-points">
+                    <li>
+                      Led a three-member team building a small-aircraft heads-up display using Agile project
+                      management.
+                    </li>
+                  </ul>
+
+                  <details>
+                    <summary>Role details <span class="sr-only">for P.E.G.A.S.U.S.</span></summary>
+                    <p>
+                      Evaluated implementation tradeoffs against requirements and engineering standards. The
+                      capstone placed among the top five interdisciplinary projects in UCF’s College of
+                      Engineering and Computer Science.
+                    </p>
+                  </details>
+                </div>
+                <img
+                  class="quest-art"
+                  src="assets/fantasy/aviation.webp"
+                  width="204"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </article>
+            </li>
+            <li class="quest-entry">
+              <span class="quest-date">May–August 2025 · Austin, TX</span>
+              <article class="quest parchment">
+                <div class="quest-banner">
+                  <img class="sprite" src="assets/fantasy/lantern.png" width="48" height="48" alt="" />
+                </div>
+                <div class="quest-info">
+                  <span class="status">Completed</span>
+                  <h3>Lutron Electronics Company</h3>
+                  <p class="role-title">Software Engineer Intern</p>
+                  <ul class="quest-points">
+                    <li>
+                      Built a component reordering feature for Lutron’s smart home app and persisted user
+                      preferences in a local SQL database.
+                    </li>
+                  </ul>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Kotlin</li>
+                    <li>Jetpack Compose</li>
+                    <li>SQL</li>
+                    <li>Jira</li>
+                  </ul>
+                  <details>
+                    <summary>
+                      Role details <span class="sr-only">for Lutron Electronics Company</span>
+                    </summary>
+                    <p>
+                      Used Jira for sprint planning and task tracking, wrote unit tests, contributed to design
+                      documentation, and participated in code reviews.
+                    </p>
+                  </details>
+                </div>
+                <img
+                  class="quest-art"
+                  src="assets/fantasy/workshop.webp"
+                  width="204"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </article>
+            </li>
+            <li class="quest-entry">
+              <span class="quest-date">July 2024–February 2025 · Remote</span>
+              <article class="quest parchment">
+                <div class="quest-banner">
+                  <img class="sprite" src="assets/fantasy/potion.png" width="48" height="48" alt="" />
+                </div>
+                <div class="quest-info">
+                  <span class="status">Completed</span>
+                  <h3>Necival LLC</h3>
+                  <p class="role-title">Software Engineer</p>
+                  <ul class="quest-points">
+                    <li>
+                      Developed a concurrent cryptocurrency trading system in Go for real-time market
+                      execution.
+                    </li>
+                  </ul>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Go</li>
+                  </ul>
+                  <details>
+                    <summary>Role details <span class="sr-only">for Necival LLC</span></summary>
+                    <p>
+                      Collaborated on system design, testing, and deployment. Automated recovery from critical
+                      system errors increased profit from 3.4% to 8%.
+                    </p>
+                  </details>
+                </div>
+                <img
+                  class="quest-art"
+                  src="assets/fantasy/observatory.webp"
+                  width="204"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </article>
+            </li>
+            <li class="quest-entry">
+              <span class="quest-date">August 2023–October 2024 · Orlando, FL</span>
+              <article class="quest parchment">
+                <div class="quest-banner">
+                  <img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" />
+                </div>
+                <div class="quest-info">
+                  <span class="status">Completed</span>
+                  <h3>University of Central Florida</h3>
+                  <p class="role-title">Undergraduate Research Assistant</p>
+                  <ul class="quest-points">
+                    <li>
+                      Modeled quantum circuit errors in Qiskit and implemented configurable qubit-flip
+                      simulations.
+                    </li>
+                  </ul>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Python</li>
+                    <li>Qiskit</li>
+                    <li>Convolutional neural networks</li>
+                  </ul>
+                  <details>
+                    <summary>
+                      Role details <span class="sr-only">for University of Central Florida</span>
+                    </summary>
+                    <p>
+                      Developed and tuned a dual-channel convolutional neural network in Python for quantum
+                      error classification and optimization.
+                    </p>
+                  </details>
+                </div>
+                <img
+                  class="quest-art"
+                  src="assets/fantasy/quantum.webp"
+                  width="204"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </article>
+            </li>
+            <li class="quest-entry">
+              <span class="quest-date">June–December 2023</span>
+              <article class="quest parchment">
+                <div class="quest-banner">
+                  <img class="sprite" src="assets/fantasy/chest.png" width="48" height="48" alt="" />
+                </div>
+                <div class="quest-info">
+                  <span class="status">Completed</span>
+                  <h3>Restaurant Equipment World</h3>
+                  <p class="role-title">Pricing Administrator</p>
+                  <ul class="quest-points">
+                    <li>
+                      Prepared Excel price updates for the online store and resolved discrepancies in price
+                      lists.
+                    </li>
+                  </ul>
+                  <ul class="tags" aria-label="Technologies">
+                    <li>Excel</li>
+                  </ul>
+                  <details>
+                    <summary>
+                      Role details <span class="sr-only">for Restaurant Equipment World</span>
+                    </summary>
+                    <p>Coordinated with coworkers and management to upload pricing updates on schedule.</p>
+                  </details>
+                </div>
+                <img
+                  class="quest-art"
+                  src="assets/fantasy/calendar.webp"
+                  width="204"
+                  height="130"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </article>
+            </li>
+          </ol>
+          <section id="education" class="education" aria-labelledby="education-title">
+            <h2 id="education-title" class="plaque">
+              <img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" />Academy of
+              Knowledge
+            </h2>
+            <div class="education-body parchment">
+              <article>
+                <h3>The University of Texas at Austin</h3>
+                <p>
+                  <strong>Online M.S. in Computer Science</strong><br />Incoming graduate student. The program
+                  starts in Spring 2027, with expected completion in Fall 2029.
+                </p>
+                <p class="education-date">Spring 2027–Fall 2029 (expected)</p>
+              </article>
+              <article>
+                <h3>University of Central Florida</h3>
+                <p>
+                  <strong>B.S. in Computer Engineering</strong><br />Comprehensive &amp; VLSI Track, minor in
+                  Physics. GPA 3.75.
+                </p>
+                <p class="education-date">August 2022–May 2026</p>
+                <p>
+                  <strong>Honors and scholarships</strong><br />Florida Academic Scholars and UCF Provost
+                  Scholarship recipient. Dean’s List in Fall 2022, Spring 2023, Fall 2023, Fall 2024, and Fall
+                  2025. President’s Honor Roll in Spring 2025.
+                </p>
+              </article>
+              <article>
+                <h3>St. Petersburg College</h3>
+                <p>
+                  <strong>Associate degree in Liberal Arts</strong><br />Early College Program through East
+                  Lake High School. GPA 3.8.
+                </p>
+                <p class="education-date">August 2020–May 2022</p>
+              </article>
+              <details id="coursework">
+                <summary>Selected coursework</summary>
+                <p>
+                  Introduction to C, Data Structures and Algorithms, Object-Oriented Programming, Discrete
+                  Structures, Quantum Computation, Operating Systems, Object-Oriented Software Development,
+                  Robot Vision, Linear Circuits I–II, Digital Systems, Computer Organization, Computer
+                  Architecture, Electronics I, Computer Communication Networks, Embedded Systems, Junior
+                  Design, Computer-Aided VLSI Design, Calculus I–III, Differential Equations, Physics I–II,
+                  Mechanics, Theoretical Methods of Physics, Wave Mechanics I–II, Chemistry I.
+                </p>
+              </details>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section id="contact" class="contact world-section" aria-labelledby="contact-title">
+        <div class="chapter chapter-contact">
+          <img
+            class="chapter-art"
+            src="assets/fantasy/messenger.webp"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="chapter-sign">
+            <h2 id="contact-title">
+              <img class="sprite" src="assets/fantasy/lantern.png" width="48" height="48" alt="" />The
+              Messenger’s Guild
+            </h2>
+            <p>Have an opportunity, collaboration or project in mind? Let’s connect.</p>
+          </div>
+        </div>
+        <div class="stone-rule" aria-hidden="true"></div>
+        <div class="content contact-content">
+          <div class="contact-card parchment">
+            <p>
+              <a class="email-address" href="mailto:landerson144000@gmail.com">landerson144000@gmail.com</a>
+            </p>
+            <div class="contact-links">
+              <a class="button button-blue" href="mailto:landerson144000@gmail.com">Email</a>
+              <a class="button button-dark" href="https://github.com/landerson7">GitHub ↗</a>
+              <a class="button button-dark" href="https://www.linkedin.com/in/landerson007/">LinkedIn ↗</a>
+            </div>
+            <div class="resume-links">
+              <a href="game/assets/UTAustinResume2.pdf" download>Download Software Résumé</a>
+              <a href="LukeOct25HWResume.pdf" download>Download Hardware Résumé</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Luke Anderson</span><a href="./">The Developer’s Realm</a><a href="legacy/">Legacy Portfolio</a
+      ><a href="#home">Back to top ↑</a>
+    </footer>
+    <nav class="mobile-dock" aria-label="Quick navigation">
+      <a href="#home" aria-current="location"
+        ><img class="sprite" src="assets/fantasy/crest.png" width="48" height="48" alt="" /><span
+          >Home</span
+        ></a
+      ><a href="#projects"
+        ><img class="sprite" src="assets/fantasy/swords.png" width="48" height="48" alt="" /><span
+          >Projects</span
+        ></a
+      ><a href="#skills"
+        ><img class="sprite" src="assets/fantasy/potion.png" width="48" height="48" alt="" /><span
+          >Skills</span
+        ></a
+      ><a href="#work-experience"
+        ><img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" /><span
+          >Experience</span
+        ></a
+      ><a href="#contact"
+        ><img class="sprite" src="assets/fantasy/lantern.png" width="48" height="48" alt="" /><span
+          >Contact</span
+        ></a
+      >
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-holder">
+            <div class="logo">L</div>
+            <div class="logo-text">Portfolio Website</div>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html#education">Education</a>
+                </li>
+                <li>
+                    <a href="index.html#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="index.html#work-experience">Work Experience</a>
+                </li>
+                <li>
+                    <a href="index.html#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="index.html#coursework">Coursework</a>
+                </li>
+                <li>
+                    <a href="mailto:lu097697@ucf.edu" class="button">Contact Me</a>
+                </li>
+            </ul>
+            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                </svg>
+                  
+            </a>
+        </nav>
+    </header>
+    <section class="projectpage container">
+        <div class="project-green">
+            <h1 class="projectsh1">SIP MWI
+                <small class="small">GoLang - SipGo, net/http, Google PubSub and Storage</small>
+            </h1>
+            <h4>Jan 2023 - Apr 2024</h4>
+            <p>
+                <li>Developed an API that converts SIP data to JSON format</li>
+                <li>Sends data to Google Cloud Storage and Google PubSub then on to the main Call Completion Engine</li>
+                <li>If subscribed user had waiting message(s), the main server contacted my API which then notified the SIP user’s
+                    device</li>
+            </p>
+        </div>
+        <div class="hero-grey">
+            <img src="./imgs/sipMwiChatGpt.webp" alt="SIPMWI" width="100%">
+        </div>
+        
+    </section>
+    <section class="skills container">
+        <div id="skills" class="projects-skills">
+            <h3>Skills Learned/Used</h3>
+            <ul>
+                <li>Session Initiation Protocol (SIP)</li>
+                <li>GoLang</li>
+                <li>Voice over IP (VoIP)</li>
+                <li>Web Requests (POST, GET, etc.)</li>
+                <li>Bitbucket</li>
+                <li>Ubunutu Terminal</li>
+                <li>Windows Powershell</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

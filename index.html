@@ -1,487 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Web Design</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="./script.js"></script>
-    <link rel="icon" type="image/webp" href="./imgs/LJAmonogram.webp">
-</head>
-<body>
-    <header>
-        <a href="#" class="logo-holder">
-            <div class="logo">L</div>
-            <div class="logo-text">Portfolio Website</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11152c" />
+    <meta
+      name="description"
+      content="Explore Luke Anderson’s software engineering portfolio as a playable pixel-art world."
+    />
+    <title>The Developer’s Realm | Luke Anderson</title>
+    <link rel="canonical" href="https://landerson7.github.io/portfolio_website/" />
+    <link rel="icon" href="./game/assets/crest.png" />
+    <link rel="stylesheet" href="./game/styles.css" />
+    <script type="module" src="./game/src/main.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="identity" href="./">
+          <img src="./game/assets/crest.png" alt="" width="48" height="48" />
+          <span><strong>Luke Anderson</strong><small>Software Engineer</small></span>
         </a>
-        <nav>
-            <ul id="menu">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#work-experience">Work Experience</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#coursework">Coursework</a>
-                </li>
-                <li>
-                    <a href="mailto:lu097697@ucf.edu" class="button">Contact Me</a>
-                </li>
-            </ul>
-            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
-                </svg>
-                  
-            </a>
-        </nav>
+        <div class="mode-switch" role="group" aria-label="Portfolio mode">
+          <button type="button" data-mode="game" aria-pressed="false">Game Mode</button>
+          <button type="button" data-mode="classic" aria-pressed="false">Classic Mode</button>
+        </div>
+        <nav id="header-links" aria-label="Contact, résumé, and portfolio views"></nav>
+      </div>
     </header>
-    <main>
-        <section class="hero container">
-            <div class="hero-blue">
-                <h1>
-                    <small id="typewriter"></small>
-                    Luke Anderson
-                </h1>
-                
-                <script>
-                    function typeWriter(text, elementId) {
-                        let i = 0;
-                        const speed = 100; // The speed/duration of the effect in milliseconds
-                        
-                        function type() {
-                            if (i < text.length) {
-                                document.getElementById(elementId).innerHTML += text.charAt(i);
-                                i++;
-                                setTimeout(type, speed);
-                            }
-                        }
-                        type();
-                    }
-                
-                    // Call the function when the window loads
-                    window.onload = function() {
-                        typeWriter('Hello ', 'typewriter');
-                        setTimeout(function() {typeWriter('my name is,', 'typewriter');}, 1500);
-                        //setTimeout(function() {typeWriter('Luke Anderson', 'typewriter');}, 1500);
-                        //typeWriter('my name is,', 'typewriter');
-                    };
-
-                </script>
-            <p>
-                I am a Senior Computer Engineering major with a minor in Physics at the University of
-                Central Florida.  I currently work as a Software Engineer Intern for Airmeez Inc where I am 
-                aiding in the refactoring of their codebase to a microservice architecture.  I was formerly
-                at Lutron Electronics as a Software Engineering Intern on their mobile app platform team and before
-                that at Necival LLC where I worked as a Software Engineer on an automated cryptocurrency trading bot.
-                <span>My areas of interest are in Software Engineering, Embedded Systems, Electronics, AI/ML, and Fintech.</span>
-            </p>
-            <div class="call-to-action">
-                <a href="LukeOct25SWEResume.pdf" class="button black">
-                    View Software Resume
-                </a>
-                <a href="LukeOct25HWResume.pdf" class="button black">
-                    View Hardware Resume
-                </a>
-                <a href="mailto:landerson144000@gmail.com" class="button white">
-                    Contact Me
-                </a>
+    <main id="main" tabindex="-1">
+      <section id="game" hidden aria-labelledby="game-title">
+        <div class="game-heading">
+          <div>
+            <h1 id="game-title">The Developer’s Realm</h1>
+            <p>Explore Luke Anderson’s portfolio.</p>
+          </div>
+          <div class="game-actions">
+            <button type="button" class="button area-button" data-open="area" hidden>In This Area</button>
+            <button type="button" class="button blue map-button" data-open="map">
+              <img src="./game/assets/book.png" alt="" /> World Map <kbd>M</kbd>
+            </button>
+          </div>
+        </div>
+        <div class="game-layout">
+          <div class="game-frame">
+            <div class="scene-bar">
+              <strong id="location-name">Crossroads</strong
+              ><span id="scene-purpose">The four paths meet here</span>
             </div>
-            <div class="social-links">
-                <a href="https://github.com/landerson7">
-                    <img src="./imgs/github.png" alt="GitHub" width="48"/>
-                </a>
-                <a href="https://www.linkedin.com/in/landerson007/">
-                    <img src="./imgs/linkedin.png" alt="Linkedin" width="48"/>
-                </a>
+            <div class="game-stage">
+              <div
+                class="game-screen"
+                id="game-screen"
+                role="group"
+                tabindex="0"
+                aria-label="Game world"
+                aria-describedby="game-controls"
+              >
+                <canvas id="world" aria-hidden="true"></canvas>
+                <div id="hotspots" role="group" aria-label="Visible points of interest"></div>
+                <div id="prompt" class="interact-prompt" hidden></div>
+              </div>
             </div>
+            <div class="game-controls" id="game-controls">
+              <span class="keyboard-guide"><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> Move</span>
+              <span class="keyboard-guide"><kbd>E</kbd> Interact</span>
+              <span>Click or tap any marker</span>
+              <span class="keyboard-guide"><kbd>M</kbd> Map</span>
             </div>
-            <div class="hero-yellow">
-                <img src="./imgs/IMG_4038.jpg" alt="aria-hidden" width="100%" />
+            <div class="touch-controls" aria-label="Touch controls">
+              <div class="dpad" role="group" aria-label="Move">
+                <button type="button" data-direction="up" aria-label="Move up">↑</button>
+                <button type="button" data-direction="left" aria-label="Move left">←</button>
+                <button type="button" data-direction="down" aria-label="Move down">↓</button>
+                <button type="button" data-direction="right" aria-label="Move right">→</button>
+              </div>
+              <button type="button" id="touch-interact" class="button blue" disabled>Interact</button>
             </div>
-        </section>
-        <section class="logos container">
-            <div class="marquee">
-                <div class="track">
-                    <img src="./imgs/html.png" alt="HTML" wdith = "128"/>
-                    <img src="./imgs/css.png" alt="CSS" width="128" />
-					<img src="./imgs/javascript.png" alt="JS" width="128" />
-                    <img src="./imgs/php-original.svg" width="128" alt="PHP" />
-                    <img src="./imgs/mysql-plain-wordmark.svg" width="128" alt="MySQL" />
-					<img src="./imgs/nextjs.png" width="128" alt="Next JS" />
-					<img src="./imgs/vscode.png" width="128" alt="VS Code" />
-					<img src="./imgs/python.png" width="128" alt="Python" />
-                    <img src="./imgs/java-original.svg" width="128" alt="Java" />
-                    <img src="./imgs/c-original.svg" width="128" alt="C" />
-                    <img src="./imgs/go-original-wordmark.svg" width="128" alt="GoLang" />
-                    <img src="./imgs/googlecloud-plain-wordmark.svg" width="128" alt="MySQL" />
-                    <img src="./imgs/kotlin.jpg" width="128" alt="Kotlin" />
-
-					<img src="./imgs/html.png" alt="HTML" width="128" />
-					<img src="./imgs/css.png" alt="CSS" width="128" />
-					<img src="./imgs/javascript.png" alt="JS" width="128" />
-                    <img src="./imgs/php-original.svg" width="128" alt="PHP" />
-                    <img src="./imgs/mysql-plain-wordmark.svg" width="128" alt="MySQL" />
-					<img src="./imgs/nextjs.png" width="128" alt="Next JS" />
-					<img src="./imgs/vscode.png" width="128" alt="VS Code" />
-					<img src="./imgs/python.png" width="128" alt="Python" />
-                    <img src="./imgs/java-original.svg" width="128" alt="Java" />
-                    <img src="./imgs/c-original.svg" width="128" alt="C" />
-                    <img src="./imgs/go-original-wordmark.svg" width="128" alt="GoLang" />
-                    <img src="./imgs/kotlin.jpg" width="128" alt="Kotlin" />
-
-                </div>
-            </div>
-        </section>
-        <section id="education" class="education container">
-            <h2><small>Past/Current</small>Education</h2>
-            <div class="degrees">
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./imgs/ucfSeal.png" alt="University of Central Florida" width="80%">
-                            <figcaption>
-                                <span>University of Central Florida</span>
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <div>Aug 2022 - May 2026</div>
-                    <h3>Bachelors of Computer Engineering Comprehensive & VLSI Track, Minor in Physics</h3>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./imgs/SPC.png" alt="St. Petersburg College" width="80%">
-                            <figcaption>
-                                <span>St. Petersburg College</span>
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <div>Aug 2020 - May 2022</div>
-                    <h3>Associate of Arts</h3>
-                </article>
-            </div>
-        </section>
-        <section id="skills" class="skills container">
-            <h2>
-                <small>About Me</small>
-                Skills
-            </h2>
-            <div class="holder-green">
-                <div class="left-column">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>HTML/CSS</li>
-                        <li>React</li>
-                        <li>Jetpack Compose</li>
-                        <li>SwiftUI</li>
-                    </ul>
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>GoLang</li>
-                        <li>PHP</li>
-                        <li>SQL</li>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                        <li>Node.js</li>
-                        <li>Swift</li>
-                    </ul>
-                    <h3>Other Languages</h3>
-                    <ul>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>MIPS Assembly</li>
-                    </ul>
-                    <h3>Programming Libraries</h3>
-                    <ul>
-                        <li>Qiskit</li>
-                        <li>SipGo</li>
-                        <li>Basics of:
-                            TensorFlow, OpenCV, TabulaPy, Matplotlib
-                        </li>
-                    </ul>
-                    <h3>Developer Tools/Other Skills</h3>
-                    <ul>
-                        <li>Ubuntu</li>
-                        <li>Git</li>
-                        <li>VSCode</li>
-                        <li>Android Studio</li>
-                        <li>XCode</li>
-                        <li>Docker</li>
-                        <li>Figma</li>
-                        <li>Fusion360</li>
-                        <li>Cadence</li>
-                        <li>Code Composer Studio</li>
-                        <li>Arduino IDE</li>
-                        <li>Soldering</li>
-                        <li>Breadboard Prototyping</li>
-                        <li>Circuit Design & Analysis</li>
-                        <li>VLSI CMOS Analysis & Design</li>
-                    </ul>
-                </div>
-                <div class="right-column">
-                    <h3>A bit about me</h3>
-                    <p>Hello my name is Luke Anderson.  I am a Florida native and enjoy
-                        going to the beach, surfing, reading, and spending time with friends and family.  
-                        I stay active by practicing rock climbing,
-                        going to the gym, hiking, and running.  I love to travel and have currently been to 40 states
-                        and 8 countries so far.  I have one pet, a Dachshund named Buddy who loves to play fetch.
-                    </p>
-                    <p>
-                        I enjoy working on new and exciting programming or hardware topics.  For example, for my
-                        senior design project my group and I are designing a heads-up display for aircrafts.  I am
-                        serving as the project manager and embedded software engineer for my group and am looking forward to working 
-                        through this project with them.  The project will involve programming in C/C++ on multiple
-                        microcontrollers for sensor data processing and the creation of a GUI.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="work-experience" class="work-experience container">
-            <h2>
-                <small>Recent</small>
-                Work Experience
-            </h2>
-            <div class="jobs">
-                                <article>
-                    <figure>
-                        <div>
-                            <img src="./imgs/lutron.jpg" alt="Workplace-1" width="100%">
-                            <figcaption>
-                                <span>Lutron Electronics</span>
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <h3>Software Engineer Intern</h3>
-                    <div>May. 2025 - Aug. 2025</div>
-                    <p>
-                        <li>Built cross-platform mobile features using Kotlin and Jetpack Compose for Lutron’s smart lighting app</li>
-                        <li>Collaborated in an Agile team environment, leveraging Jira for sprint planning, task tracking, and iteration</li>
-                        <li>Adhered to software engineering best practices by implementing unit tests, contributing to design
-documentation, and participating in code reviews</li>
-                        
-                    </p>
-                </article>
-                                <article>
-                    <figure>
-                        <div>
-                            <img src="./imgs/airmeez-logo-slogan.webp" alt="Workplace-1" width="100%">
-                            <figcaption>
-                                <span>Airmeez Inc.</span>
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <h3>Software Engineer Intern</h3>
-                    <div>Jan. 2024 - Jul. 2024, Jan. 2025 - May 2025, Aug. 2025 - Present</div>
-                    <p>
-                        <li>Aiding in migrating legacy architecture to new microservice architecture using Docker for containerized developement</li>
-                        <li>Utilizing C++ to facilitate communication with telecom servers and extend SoundHound AI connection times</li>
-                        <li>Developed RESTful APIs in Go for data transfer with the main server</li>
-                        
-                    </p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./imgs/necival.png" alt="Workplace-1" width="100%">
-                            <figcaption>
-                                <span>Necival LLC.</span>
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <h3>Software Engineer</h3>
-                    <div>Jul. 2024 - Feb. 2025</div>
-                    <p>
-                        <li>Developed a concurrent cryptocurrency trading system using Go for real-time market execution</li>
-                        <li>Collaborated on system design, testing, and deployment to improve performance and reliability</li>
-                        
-                    </p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./imgs/ucfSeal.png" alt="Workplace-2" width="100%">
-                            <figcaption>
-                                University of Central Florida
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <h3>Undergraduate Research Assistant</h3>
-                    <div>Aug. 2023 - Sep. 2024</div>
-                    <p>
-                        <li> Used a Quantum Computing specific Python library (Qiskit) to modify a quantum circuit and then used
-                            TensorFlow to optimize the circuit for error reduction</li>
-                        <li>Implementing various Python skills to simplify and add fields to the input and output</li>
-                        <li>Learned how to use GitHub to collaborate with my Professor</li>
-                    </p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./imgs/REW-clear.jpg" alt="Workplace-3" width="100%">
-                            <figcaption>
-                                Resaurant Equipment World (Piece Sales Co., Inc.)
-                            </figcaption>
-                        </div>
-                    </figure>
-                    <h3>Pricing Administrator</h3>
-                    <div>Jun. 2023 - Dec. 2023</div>
-                    <p>
-                        <li>Managed Excel spreadsheets to upload to the REW system to ensure all prices on website were current</li>
-                        <li>Problem solved when presented with complicated pricing lists</li>
-                        <li>Worked with coworkers and management to ensure an efficient and timely upload process</li>
-                    </p>
-                </article>
-            </div>
-        </section>
-        <section id="projects" class="bento container">
-            <h2>
-                <small>
-                    Previous/Current
-                </small>
-                Projects
-            </h2>
-            <div class="bento-grid">
-                <a href="project1.html" class="bento-item">
-                    <img src="./imgs/sipMwiChatGpt.webp" alt="SIP MWI" width="100%">
-                    <figcaption>
-                        <span>Go SIP MWI</span>
-                    </figcaption>
-                </a>
-                <a href="project2.html" class="bento-item">
-                    <img src="./imgs/cMovieTheaterManagementChatGpt.webp" alt="C Movie Theatre Management Programs" width="100%">
-                    <figcaption>
-                        <span>C Movie Theatre Management Programs</span>
-                    </figcaption>
-                </a>
-                <a href="project3.html" class="bento-item">
-                    <img src="./imgs/javaFacultyManagementProgramChatGpt.webp" alt="Java Faculty Management Program" width="100%">
-                    <figcaption>
-                        <span>Java Faculty Management Program</span>
-                    </figcaption>
-                </a>
-                <a href="project4.html" class="bento-item">
-                    <img src="./imgs/dFlipFlopChatGpt.webp" alt="D Gate Breadboard Flip Flop" width="100%">
-                    <figcaption>
-                        <span>Breadboard D Gate Flip-Flop</span>
-                    </figcaption>
-                </a>
-                <a href="project5.html" class="bento-item">
-                    <img src="./imgs/QFTChatGpt.webp" alt="Python Quantum Fourier Transform" width="100%">
-                    <figcaption>
-                        <span>Python Quantum Fourier/Inverse Fourier Transform</span>
-                    </figcaption>
-                </a>
-                <a href="project6.html" class="bento-item">
-                    <img src="./imgs/CalendarChatGpt.webp" alt="Calendar/To-do List" width="100%">
-                    <figcaption>
-                        <span>Planner Web Application</span>
-                    </figcaption>
-                </a>
-                <a href="project7.html" class="bento-item">
-                    <img src="./imgs/webcoursesAPI.webp" alt="Webcourses-Notion API" width="100%">
-                    <figcaption>
-                        <span>Webcourses to Notion API</span>
-                    </figcaption>
-                </a>
-
-            </div>
-        </section>
-        <section id="coursework" class="coursework container">
-            <h2><small>Relevant</small>Coursework</h2>
-            <div class="courses-list">
-                <h3>Computer Science</h3>
-                <ul>
-                    <li>Introduction to C</li>
-                    <li>Computer Science 1 and 2 (DSA)</li>
-                    <li>Introduction to Object Oriented
-                        Programming</li>
-                    <li>Introduction to Discrete Structures</li>
-                    <li>Introduction to Quantum Computation</li>
-                    <li>Operating Systems</li>
-                    <li>Processes of Object Oriented Software Developement</li>
-                    <li>Robot Vision (IP)</li>
-                </ul>
-                <h3>Computer / Electrical Engineering</h3>
-                <ul>
-                    <li>Linear Circuits 1 and 2</li>
-                    <li>Digital Systems</li>
-                    <li>Computer Organization</li>
-                    <li>Computer Architecture</li>
-                    <li>Electronics 1</li>
-                    <li>Computer Communication Networks</li>
-                    <li>Embedded Systems</li>
-                    <li>Junior Design</li>
-                    <li>Computer Aided Design of VLSI (IP)</li>
-                </ul>
-                <h3>Math and Science</h3>
-                <ul>
-                    <li>Calculus 1-3</li>
-                    <li>Differential Equations</li>
-                    <li>Physics 1 and 2</li>
-                    <li>Mechanics</li>
-                    <li>Theoretical Methods of Physics</li>
-                    <li>Wave Mechanics 1 and 2</li>
-                    <li>Chemistry 1</li>
-                </ul>
-            </div>
-        </section>
-        <!--
-        <section class="chatbot container">
-            <h2>
-                <small>
-                    Talk to me!
-                </small>
-                Chatbot
-            </h2>
-            <div class="chatbot-green">
-                <div class="chat-info">
-                    <h3>Azure AI Chatbot</h3>
-                    <p>Following online tutorials, I have replicated this AI chatbot by interacting
-                        with the Microsoft Azure AI API.  The ChatBot knows all my skills, work experience
-                        and hobbies.  You can ask any question you like about me to this bot!
-                    </p>
-                    <p>If you would like a copy of my resume, please press the Download button below.</p>
-                    <a href="LukeResumeMay24TechUpdate.pdf"class = "button black">Download Resume</a>
-                    
-                </div>
-                <div class="chat-box">
-                    <div class="scroll-area">
-                        <ul id="chat-log">
-                            <li>
-                                <span class="avatar bot">
-                                    AI</span>
-                                    <div class="message">Hello, I am a friendy chatbot that lets you interact with this portfolio and CV.  How can I help?</div>
-                            </li>
-                            <li>
-                                <span class="avatar user">
-                                    User</span>
-                                    <div class="message">I have a question about this resume.</div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="chat-message">
-                        <input type="text" placeholder="Hey Luke, what skills are you best at?">
-                        <button class="button black">Send</button>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+          </div>
+          <div class="game-sidebar">
+            <aside class="destinations" aria-labelledby="destination-title">
+              <h2 id="destination-title">Destinations</h2>
+              <div id="destination-list"></div>
+            </aside>
+            <section class="destinations room-shortcuts" aria-labelledby="room-title">
+              <h2 id="room-title" hidden>In This Area</h2>
+              <div id="room-links" hidden></div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section id="classic" hidden aria-labelledby="classic-title"></section>
+      <noscript
+        ><p class="no-script">
+          The Realm needs JavaScript.
+          <a href="./portfolio.html">Open Luke’s illustrated portfolio</a>.
+        </p></noscript
+      >
     </main>
-</body>
+    <footer>
+      <a href="./legacy/">← Legacy Portfolio</a>
+      <a href="./portfolio.html">Illustrated Portfolio</a>
+    </footer>
+    <dialog id="panel" aria-labelledby="panel-title">
+      <div class="panel-heading">
+        <h2 id="panel-title"></h2>
+        <button type="button" class="button" id="close-panel" aria-label="Close panel">×</button>
+      </div>
+      <div id="panel-content" class="panel-content"></div>
+    </dialog>
+  </body>
 </html>

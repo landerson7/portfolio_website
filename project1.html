@@ -1,84 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="./script.js"></script>
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo-holder">
-            <div class="logo">L</div>
-            <div class="logo-text">Portfolio Website</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="A Go microservice that converts SIP message-waiting traffic to structured JSON and notifies subscribed devices."
+    />
+    <meta name="theme-color" content="#11152c" />
+    <title>SIP Message Waiting Indicator (MWI) | Luke Anderson</title>
+    <link rel="icon" href="assets/fantasy/crest.png" />
+    <link rel="preload" href="assets/fantasy/pixelify.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="project-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="portfolio.html#home"
+          ><img class="sprite" src="assets/fantasy/crest.png" width="48" height="48" alt="" />
+          <span class="brand-name">Luke Anderson<small>Software Engineer</small></span>
         </a>
-        <nav>
-            <ul id="menu">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="index.html#education">Education</a>
-                </li>
-                <li>
-                    <a href="index.html#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="index.html#work-experience">Work Experience</a>
-                </li>
-                <li>
-                    <a href="index.html#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="index.html#coursework">Coursework</a>
-                </li>
-                <li>
-                    <a href="mailto:lu097697@ucf.edu" class="button">Contact Me</a>
-                </li>
-            </ul>
-            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
-                </svg>
-                  
-            </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="portfolio.html#home"><span>Home</span></a
+          ><a href="portfolio.html#projects"><span>Projects</span></a
+          ><a href="portfolio.html#skills"><span>Skills</span></a
+          ><a href="portfolio.html#work-experience"><span>Experience</span></a
+          ><a href="portfolio.html#education"><span>Education</span></a
+          ><a href="portfolio.html#contact"><span>Contact</span></a>
         </nav>
+        <div class="nav-social">
+          <a href="https://github.com/landerson7" aria-label="GitHub"
+            ><img src="imgs/github.png" width="20" height="20" alt=""
+          /></a>
+          <a href="https://www.linkedin.com/in/landerson007/" aria-label="LinkedIn"
+            ><span class="linkedin-mark" aria-hidden="true"></span
+          ></a>
+          <a href="mailto:landerson144000@gmail.com" aria-label="Email"><span aria-hidden="true">✉</span></a>
+        </div>
+        <details class="mobile-menu">
+          <summary aria-label="Navigation menu"><span aria-hidden="true"></span></summary>
+          <nav aria-label="Mobile menu">
+            <a href="portfolio.html#home"><span>Home</span></a
+            ><a href="portfolio.html#projects"><span>Projects</span></a
+            ><a href="portfolio.html#skills"><span>Skills</span></a
+            ><a href="portfolio.html#work-experience"><span>Experience</span></a
+            ><a href="portfolio.html#education"><span>Education</span></a
+            ><a href="portfolio.html#contact"><span>Contact</span></a>
+          </nav>
+        </details>
+      </div>
     </header>
-    <section class="projectpage container">
-        <div class="project-green">
-            <h1 class="projectsh1">SIP MWI
-                <small class="small">GoLang - SipGo, net/http, Google PubSub and Storage</small>
-            </h1>
-            <h4>Jan 2023 - Apr 2024</h4>
-            <p>
-                <li>Developed an API that converts SIP data to JSON format</li>
-                <li>Sends data to Google Cloud Storage and Google PubSub then on to the main Call Completion Engine</li>
-                <li>If subscribed user had waiting message(s), the main server contacted my API which then notified the SIP user’s
-                    device</li>
+    <main id="main" tabindex="-1">
+      <article class="project-detail content">
+        <a class="back-link" href="portfolio.html#projects">← Back to Project Atlas</a>
+        <div class="detail-art">
+          <img
+            src="assets/fantasy/communications.webp"
+            width="204"
+            height="130"
+            alt=""
+            fetchpriority="high"
+          />
+        </div>
+        <div class="detail-body parchment">
+          <header>
+            <p class="project-kind">Airmeez work sample · Backend</p>
+            <h1>SIP Message Waiting Indicator (MWI)</h1>
+            <p class="detail-summary">
+              A Go microservice that converts SIP message-waiting traffic to structured JSON and notifies
+              subscribed devices.
             </p>
-        </div>
-        <div class="hero-grey">
-            <img src="./imgs/sipMwiChatGpt.webp" alt="SIPMWI" width="100%">
-        </div>
-        
-    </section>
-    <section class="skills container">
-        <div id="skills" class="projects-skills">
-            <h3>Skills Learned/Used</h3>
-            <ul>
-                <li>Session Initiation Protocol (SIP)</li>
-                <li>GoLang</li>
-                <li>Voice over IP (VoIP)</li>
-                <li>Web Requests (POST, GET, etc.)</li>
-                <li>Bitbucket</li>
-                <li>Ubunutu Terminal</li>
-                <li>Windows Powershell</li>
+            <p class="education-date">January–April 2024</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Go</li>
+              <li>SIP</li>
+              <li>Google Cloud Storage</li>
+              <li>Pub/Sub</li>
             </ul>
+          </header>
+          <section>
+            <h2>Event processing</h2>
+            <p>I integrated Cloud Storage for persistence and Pub/Sub for asynchronous processing.</p>
+          </section>
+          <section>
+            <h2>Notifications</h2>
+            <p>
+              The service receives message-status requests from the primary server and sends SIP MWI
+              notifications to subscribed devices.
+            </p>
+          </section>
         </div>
-    </section>
-</body>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <span>Luke Anderson</span><a href="./">The Developer’s Realm</a><a href="legacy/">Legacy Portfolio</a
+      ><a href="portfolio.html#home">Back to top ↑</a>
+    </footer>
+    <nav class="mobile-dock" aria-label="Quick navigation">
+      <a href="portfolio.html#home"
+        ><img class="sprite" src="assets/fantasy/crest.png" width="48" height="48" alt="" /><span
+          >Home</span
+        ></a
+      ><a href="portfolio.html#projects"
+        ><img class="sprite" src="assets/fantasy/swords.png" width="48" height="48" alt="" /><span
+          >Projects</span
+        ></a
+      ><a href="portfolio.html#skills"
+        ><img class="sprite" src="assets/fantasy/potion.png" width="48" height="48" alt="" /><span
+          >Skills</span
+        ></a
+      ><a href="portfolio.html#work-experience"
+        ><img class="sprite" src="assets/fantasy/book.png" width="48" height="48" alt="" /><span
+          >Experience</span
+        ></a
+      ><a href="portfolio.html#contact"
+        ><img class="sprite" src="assets/fantasy/lantern.png" width="48" height="48" alt="" /><span
+          >Contact</span
+        ></a
+      >
+    </nav>
+  </body>
 </html>
