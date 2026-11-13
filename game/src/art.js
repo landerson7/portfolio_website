@@ -321,43 +321,34 @@ function runway(p, x, y, w, h, tint) {
 }
 
 function lab(p, scene) {
-  room(p, scene, "steel", 300, 356);
-  p.rect(37, 35, 581, 372, "#15152a52");
-  p.rect(271, 40, 115, 366, "#2536505b");
-  for (const x of [53, 267, 388, 603]) {
-    for (let y = 43; y < 398; y += 13) p.rect(x, y, 2, 7, "#b7955a");
+  const { width, height, entrance, stations, tools } = scene;
+  room(p, scene, "steel", entrance.left, entrance.right);
+  p.rect(37, 35, width - 75, height - 60, "#15152a52");
+  p.rect(271, 40, 115, height - 66, "#2536505b");
+  for (const x of [53, 267, 388, width - 53]) {
+    for (let y = 43; y < height - 34; y += 13) p.rect(x, y, 2, 7, "#b7955a");
   }
-  for (let y = 150; y < 399; y += 24) p.rect(327, y, 2, 11, "#8b9fb467");
+  for (let y = 150; y < height - 33; y += 24) p.rect(327, y, 2, 11, "#8b9fb467");
   runway(p, 271, 39, 116, 104, "#9e9e8b");
   p.glow(328, 80, 62, "#3b90dc", "3c", 0.76);
   p.sprite("plane", 271, 41, 115, 99, true);
-  for (const [name, x, y, tint, glow] of [
-    ["sidecraft", 91, 154, "#b48950", "#e39942"],
-    ["avionics", 422, 154, "#549a98", "#28ecce"],
-    ["trading", 91, 247, "#a278af", "#b74aff"],
-    ["portfolio", 422, 247, "#6180b4", "#4596ff"],
-  ]) {
-    runway(p, x - 10, y - 10, 163, 63, tint);
-    p.glow(x + 72, y + 24, 79, glow, "4c", 0.65);
-    p.rect(x + 3, y + 6, 140, 41, "#0b112797");
-    p.sprite(name, x, y, 143, 43);
+  for (const { x, y, w, h, sprite, glow } of stations) {
+    runway(p, x - 10, y - 10, w + 20, h + 20, glow + "90");
+    p.glow(x + w / 2, y + h / 2, 79, glow, "4c", 0.65);
+    p.rect(x + 3, y + 6, w - 3, h - 2, "#0b112797");
+    p.sprite(sprite, x, y, w, h);
   }
-  p.glow(418, 351, 85, "#f1a632", "68", 0.64);
-  p.sprite("tools", 350, 332, 138, 36);
-  p.sprite("crate", 77, 336, 110, 33);
+  p.glow(tools.x + tools.w / 2, tools.y + tools.h / 2, 85, "#f1a632", "68", 0.64);
+  p.sprite("tools", tools.x, tools.y, tools.w, tools.h);
+  p.sprite("crate", 77, height - 96, 110, 33);
   for (const x of [87, 517]) p.sprite("power", x, 52, 54, 31);
-  for (const [x, y] of [
-    [52, 50],
-    [603, 50],
-    [55, 202],
-    [600, 202],
-    [56, 365],
-    [600, 365],
-    [343, 352],
-    [499, 353],
-  ])
-    lantern(p, x, y);
-  for (const x of [304, 351]) p.rect(x, 402, 2, 8, "#55e1f5");
+  for (let y = 50; y < height - 47; y += 104) {
+    lantern(p, 54, y);
+    lantern(p, width - 54, y);
+  }
+  lantern(p, tools.x - 7, tools.y + 20);
+  lantern(p, tools.x + tools.w + 11, tools.y + 21);
+  for (const x of [entrance.left + 4, entrance.right - 5]) p.rect(x, height - 30, 2, 8, "#55e1f5");
 }
 
 function village(p, scene, random) {

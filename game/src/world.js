@@ -10,6 +10,30 @@ const spot = (key, x, y, w, h, label) => ({
 const door = (to, x, y, w, h) => ({ ...rect(x, y, w, h), to });
 const area = Object.fromEntries(areas.map((entry) => [entry.id, entry]));
 
+const labHeight = 778;
+const labEntrance = 356;
+const labTools = spot("skills", labEntrance - 6, labHeight - 100, 138, 36);
+const labStations = [
+  ["sidecraftx", "sidecraft", "#e39942"],
+  ["pegasus", "avionics", "#28ecce"],
+  ["tradingBot", "trading", "#b74aff"],
+  ["portfolio", "portfolio", "#4596ff"],
+  ["fitLink", "portfolio", "#51ce8f"],
+  ["sipMwi", "power", "#a181ff"],
+  ["goNotion", "sidecraft", "#d6bd80"],
+  ["rangeFinder", "avionics", "#6ad6f4"],
+  ["planner", "portfolio", "#66a9ee"],
+  ["theater", "trading", "#e292b1"],
+  ["universityRecords", "desk", "#b8d07b"],
+  ["flipFlop", "crate", "#ed8e66"],
+  ["quantumFourier", "power", "#bd8cf4"],
+].map(([project, sprite, glow], index) => ({
+  ...spot(`projects.${project}`, index % 2 === 0 ? 91 : 422, 599 - Math.floor(index / 2) * 74, 143, 43),
+  sprite,
+  glow,
+  shortcut: index < 4,
+}));
+
 export const scenes = {
   crossroads: {
     title: "Crossroads",
@@ -88,30 +112,27 @@ export const scenes = {
     title: area.lab.name,
     purpose: area.lab.description,
     width: 656,
-    height: 432,
-    spawn: point(328, 367),
-    doors: [door("crossroads", 301, 414, 54, 18)],
+    height: labHeight,
+    spawn: point(328, labHeight - 65),
+    entrance: { left: 300, right: labEntrance },
+    tools: labTools,
+    stations: labStations,
+    doors: [door("crossroads", 301, labHeight - 18, 54, 18)],
     hotspots: [
-      spot("skills", 350, 332, 138, 36),
-      spot("projects.sidecraftx", 91, 154, 143, 43),
-      spot("projects.pegasus", 422, 154, 143, 43),
-      spot("projects.tradingBot", 91, 247, 143, 43),
-      spot("projects.portfolio", 422, 247, 143, 43),
-      spot("travel.crossroads", 300, 399, 56, 30, "Return to Crossroads"),
+      labTools,
+      ...labStations,
+      spot("travel.crossroads", 300, labHeight - 33, 56, 30, "Return to Crossroads"),
     ],
     blocks: [
       rect(0, 0, 656, 30),
-      rect(0, 30, 41, 402),
-      rect(615, 30, 41, 402),
-      rect(41, 412, 259, 20),
-      rect(356, 412, 259, 20),
+      rect(0, 30, 41, labHeight - 30),
+      rect(615, 30, 41, labHeight - 30),
+      rect(41, labHeight - 20, 259, 20),
+      rect(labEntrance, labHeight - 20, 259, 20),
       rect(278, 41, 100, 97),
-      rect(91, 154, 143, 43),
-      rect(422, 154, 143, 43),
-      rect(91, 247, 143, 43),
-      rect(422, 247, 143, 43),
-      rect(350, 332, 138, 36),
-      rect(77, 337, 110, 32),
+      ...labStations,
+      labTools,
+      rect(77, labHeight - 95, 110, 32),
       rect(517, 53, 54, 32),
       rect(87, 52, 54, 30),
     ],

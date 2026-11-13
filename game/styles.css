@@ -402,6 +402,10 @@ kbd {
   font: 650 clamp(0.65rem, 1.05vw, 0.88rem)/1.12 var(--body);
   box-shadow: 0 1px 0 #060b1b;
 }
+.hotspot[data-open^="projects."] span {
+  max-width: 150px;
+  white-space: normal;
+}
 .hotspot:hover,
 .hotspot.nearby,
 .hotspot:focus-visible {

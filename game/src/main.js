@@ -107,7 +107,7 @@ function renderMarkers() {
   markerLayout = "";
   roomLinks.replaceChildren();
   for (const spot of scene.hotspots) {
-    if (spot.key.startsWith("travel.") || spot.key === "map") continue;
+    if (spot.shortcut === false || spot.key.startsWith("travel.") || spot.key === "map") continue;
     const shortcut = document.createElement("button");
     shortcut.type = "button";
     shortcut.className = "button";
