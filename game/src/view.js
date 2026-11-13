@@ -156,7 +156,7 @@ export function destinationCards(includeCenter = false) {
 }
 
 const classicSections = [
-  ["about", "About", "crest"],
+  ["about", "About Me", "crest"],
   ["projects", "Projects", "swords"],
   ["skills", "Skills", "potion"],
   ["experience", "Experience", "shield"],
@@ -168,7 +168,7 @@ export function classicMarkup() {
   return `
     <div class="classic-hero">
       <img src="${asset("crossroads", "webp")}" alt="" width="475" height="158">
-      <div><h1 id="classic-title">Luke Anderson</h1><p>Software Engineer · Builder of Digital Worlds</p>
+      <div><h1 id="classic-title">Luke Anderson’s Portfolio</h1><p>Software Engineer</p>
         <button class="button blue" type="button" data-mode="game">${icon("crest")} Enter Game Mode →</button></div>
     </div>
     <nav class="classic-nav" aria-label="Portfolio sections">

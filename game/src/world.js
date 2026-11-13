@@ -169,7 +169,7 @@ export const scenes = {
     spawn: point(240, 273),
     doors: [door("crossroads", 214, 304, 52, 16)],
     hotspots: [
-      spot("about", 307, 171, 97, 51, "Workstation · About Luke"),
+      spot("about", 307, 171, 97, 51, "Workstation · About Me"),
       spot("contact", 111, 231, 38, 39, "Mailbox · Contact"),
       spot("travel.crossroads", 212, 286, 56, 34, "Return to Crossroads"),
     ],

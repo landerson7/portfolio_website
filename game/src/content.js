@@ -8,16 +8,21 @@ export const contact = {
 };
 
 export const about = {
-  title: "About Luke",
-  summary: "I’m an electronics engineer with the U.S. Air Force, where I develop mission-planning software.",
+  title: "About Me",
+  summary:
+    "I’m a Florida native now living in Central Georgia. I work as an electronics engineer with the U.S. Air Force in Warner Robins, where I develop and maintain mission-planning software.",
   details: [
     [
-      "Background",
-      "I earned a B.S. in Computer Engineering with a minor in Physics from the University of Central Florida. My experience includes mobile development at Lutron, backend and telecom work at Airmeez, concurrent systems at Necival, and quantum circuit research at UCF.",
+      "Education",
+      "I earned a B.S. in Computer Engineering with a minor in Physics from the University of Central Florida. I’ll begin pursuing an online M.S. in Computer Science at UT Austin in Spring 2027, with expected completion in Fall 2029.",
+    ],
+    [
+      "Engineering experience",
+      "I built mobile features at Lutron, worked on backend and telecom software at Airmeez, developed concurrent trading software at Necival, and researched quantum circuit errors at UCF. For my senior capstone, I led a three-person team that built a heads-up display for small aircraft. I’m also building SidecraftX, an AI mentorship platform for people starting side hustles.",
     ],
     [
       "Outside work",
-      "I’m a Florida native who enjoys surfing, reading, climbing, hiking, running, and traveling. I have a dachshund named Buddy who loves to play fetch.",
+      "I enjoy going to the beach, surfing, reading, cooking, and spending time with friends and family. I stay active through rock climbing, going to the gym, hiking, and running. I love to travel and have visited at least 40 states and eight countries. My dachshund, Buddy, loves to play fetch.",
     ],
   ],
 };
