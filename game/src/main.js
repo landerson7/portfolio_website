@@ -17,6 +17,7 @@ const closeButton = document.querySelector("#close-panel");
 const interactButton = document.querySelector("#touch-interact");
 const prompt = document.querySelector("#prompt");
 const motion = matchMedia("(prefers-reduced-motion: reduce)");
+const mobileLayout = matchMedia("(max-width: 700px), (max-width: 950px) and (pointer: coarse)");
 const controls = new Map([
   ["w", "up"],
   ["a", "left"],
@@ -199,7 +200,9 @@ function interact(spot, trigger = screen) {
 function setViewport(scene) {
   const aspect = screen.clientWidth / screen.clientHeight;
   if (!Number.isFinite(aspect) || aspect <= 0) return false;
-  viewport.h = Math.round(Math.min(scene.height, scene.width / aspect));
+  // Move the mobile camera closer to the workbenches so adjacent labels have more room.
+  const zoom = scene === scenes.lab && mobileLayout.matches ? 1.15 : 1;
+  viewport.h = Math.round(Math.min(scene.height, scene.width / aspect) / zoom);
   viewport.w = Math.round(Math.min(scene.width, viewport.h * aspect));
   viewport.x = Math.round(Math.max(0, Math.min(scene.width - viewport.w, player.x - viewport.w / 2)));
   viewport.y = Math.round(Math.max(0, Math.min(scene.height - viewport.h, player.y - viewport.h / 2)));
@@ -213,7 +216,15 @@ function setViewport(scene) {
 }
 
 function positionMarkers() {
-  const layout = [screen.clientWidth, screen.clientHeight, viewport.x, viewport.y, nearby?.key].join(",");
+  const layout = [
+    screen.clientWidth,
+    screen.clientHeight,
+    viewport.w,
+    viewport.h,
+    viewport.x,
+    viewport.y,
+    nearby?.key,
+  ].join(",");
   if (layout === markerLayout) return;
   markerLayout = layout;
   const scaleX = screen.clientWidth / viewport.w;
@@ -364,13 +375,34 @@ motion.addEventListener("change", () => {
   schedule();
 });
 
+function nudgePlayer(direction, distance) {
+  const dx = direction === "left" ? -distance : direction === "right" ? distance : 0;
+  const dy = direction === "up" ? -distance : direction === "down" ? distance : 0;
+  player.direction = direction;
+  // Small steps keep taps and keyboard-activated controls within the collision rules.
+  for (let n = 0; n < 4; n++) {
+    const exit = walk(scenes[locationId], player, dx / 4, dy / 4);
+    if (exit) {
+      travel(exit);
+      return;
+    }
+  }
+  dirty = true;
+  schedule();
+}
+
+document.querySelector(".dpad").addEventListener("contextmenu", (event) => event.preventDefault());
 document.querySelectorAll("[data-direction]").forEach((button) => {
+  const direction = button.dataset.direction;
   button.addEventListener("pointerdown", (event) => {
     if (event.button !== 0) return;
+    const isTouch = event.pointerType === "touch";
+    if (isTouch) event.preventDefault();
     button.setPointerCapture(event.pointerId);
-    pressed.set(event.pointerId, button.dataset.direction);
+    pressed.set(event.pointerId, direction);
     button.classList.add("held");
-    schedule();
+    if (isTouch) nudgePlayer(direction, 6);
+    else schedule();
   });
   for (const name of ["pointerup", "pointercancel", "lostpointercapture"]) {
     button.addEventListener(name, (event) => {
@@ -379,21 +411,7 @@ document.querySelectorAll("[data-direction]").forEach((button) => {
     });
   }
   button.addEventListener("click", (event) => {
-    if (event.detail !== 0 || dialog.open) return;
-    const direction = button.dataset.direction;
-    const x = direction === "left" ? -11 : direction === "right" ? 11 : 0;
-    const y = direction === "up" ? -11 : direction === "down" ? 11 : 0;
-    player.direction = direction;
-    // Use small steps so a keyboard-activated control obeys the same collision.
-    for (let n = 0; n < 4; n++) {
-      const exit = walk(scenes[locationId], player, x / 4, y / 4);
-      if (exit) {
-        travel(exit);
-        return;
-      }
-    }
-    dirty = true;
-    schedule();
+    if (event.detail === 0 && !event.pointerType && !dialog.open) nudgePlayer(direction, 11);
   });
 });
 interactButton.addEventListener("click", () => interact(nearby, interactButton));
@@ -415,6 +433,10 @@ dialog.addEventListener("close", () => {
   else focusReturn.focus({ preventScroll: true });
   focusReturn = null;
   focusWorldOnClose = false;
+  dirty = true;
+  schedule();
+});
+mobileLayout.addEventListener("change", () => {
   dirty = true;
   schedule();
 });
